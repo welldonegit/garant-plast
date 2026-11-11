@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сетки плиссе на заказ — Ventanas Perfect</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #F2F0ED; font-family: "Golos Text", system-ui, sans-serif; -webkit-font-smoothing: antialiased; color: #16181A; }
+  * { box-sizing: border-box; }
+  a { color: #16181A; text-decoration: none; }
+  a:hover { color: #E24C2B; }
+  input, select, button, textarea { font-family: inherit; }
+  ::placeholder { color: #6B7074; }
+  ::selection { background: #F6D3C8; color: #16181A; }
+  :focus-visible { outline: 2px solid #E24C2B; outline-offset: 3px; }
+  input { caret-color: #E24C2B; }
+  html { scrollbar-color: #C9C4BE #F2F0ED; }
+  @keyframes plMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none !important; } }
+</style>
+</helmet>
+
+<div style="background:#F2F0ED;color:#16181A;font-size:16px;line-height:1.5;overflow-x:clip">
+
+  <sc-if value="{{ topBarVisible }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#16181A;color:#B9BEC2;font-size:13px">
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);min-height:40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+      <a href="tel:+34000000000" style="color:#fff;font-weight:600">+34 000 000 000</a>
+      <a href="https://wa.me/34000000000" style="color:#B9BEC2">WhatsApp</a>
+      <span>Пн–Пт 9:00–18:00</span>
+      <div style="flex:1"></div>
+      <div style="display:flex;gap:10px">
+        <a href="#" style="color:#8E9499">ES</a>
+        <a href="#" style="color:#8E9499">EN</a>
+        <a href="#" style="color:#fff;font-weight:600">RU</a>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <dc-import name="SiteHeader" home="/" style="position:sticky;top:0;z-index:50" hint-size="100%,66px"></dc-import>
+
+  <main>
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
+      <nav aria-label="Хлебные крошки" style="padding:clamp(16px,2vw,24px) 0 clamp(16px,2vw,28px)">
+        <ol style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:14px;color:#5A5F63">
+          <li><a href="/" style="color:#5A5F63;text-decoration:none;transition:color .2s" style-hover="color:#16181A">Главная</a></li>
+          <li aria-hidden="true" style="color:#A5A09A">/</li>
+          <li><a href="/#showcase" style="color:#5A5F63;text-decoration:none;transition:color .2s" style-hover="color:#16181A">Продукция</a></li>
+          <li aria-hidden="true" style="color:#A5A09A">/</li>
+          <li aria-current="page" style="color:#16181A;font-weight:500">Сетки плиссе</li>
+        </ol>
+      </nav>
+
+      <div style="display:grid;grid-template-columns:{{ gridCols }};column-gap:clamp(32px,4vw,64px);row-gap:28px;align-items:start;padding-bottom:clamp(56px,7vw,96px)">
+
+        <div style="min-width:0">
+          <sc-if value="{{ twoCol }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:clamp(18px,1.8vw,28px)">
+              <figure style="margin:0">
+                <div style="position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#ECE9E5">
+                  <image-slot id="{{ galleryMain.id }}" src="{{ galleryMain.src }}" shape="rounded" radius="18" placeholder="{{ galleryMain.desc }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                  <figcaption style="position:absolute;left:clamp(14px,1.6vw,20px);bottom:clamp(14px,1.6vw,20px);max-width:calc(100% - 40px);pointer-events:none;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:9px 16px;font-size:13.5px;line-height:1.3;color:#fff;background:rgba(12,14,16,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">{{ galleryMain.cap }}</figcaption>
+                </div>
+              </figure>
+              <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(14px,1.6vw,24px);row-gap:clamp(18px,1.8vw,28px)">
+                <sc-for list="{{ galleryRest }}" as="g" hint-placeholder-count="4">
+                  <figure style="margin:0">
+                    <div style="position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background:#ECE9E5">
+                      <image-slot id="{{ g.id }}" src="{{ g.src }}" shape="rounded" radius="16" placeholder="{{ g.desc }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                      <figcaption style="position:absolute;left:12px;right:12px;bottom:12px;display:flex;pointer-events:none"><span style="border:1px solid rgba(255,255,255,.7);border-radius:16px;padding:8px 13px;font-size:13px;line-height:1.3;color:#fff;background:rgba(12,14,16,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">{{ g.cap }}</span></figcaption>
+                    </div>
+                  </figure>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ oneCol }}" hint-placeholder-val="{{ false }}">
+            <div style="position:relative;margin:0 calc(-1 * clamp(16px,3vw,32px))">
+              <div ref="{{ trackRef }}" onScroll="{{ onTrackScroll }}" aria-label="Галерея: листайте в сторону" tabindex="0" style="display:flex;gap:{{ trackGap }};overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 {{ trackPad }};scroll-padding:0 {{ trackPad }};overscroll-behavior-x:contain">
+                <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="2">
+                  <figure style="margin:0;flex:0 0 {{ slideW }};scroll-snap-align:start">
+                    <div style="position:relative;aspect-ratio:{{ slideAspect }};border-radius:{{ slideRadius }};overflow:hidden;background:#ECE9E5">
+                      <image-slot id="{{ g.id }}" src="{{ g.src }}" shape="rect" placeholder="{{ g.desc }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                      <figcaption style="position:absolute;left:14px;right:14px;bottom:14px;display:flex;pointer-events:none"><span style="border:1px solid rgba(255,255,255,.7);border-radius:16px;padding:8px 14px;font-size:13px;line-height:1.3;color:#fff;background:rgba(12,14,16,.35);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">{{ g.cap }}</span></figcaption>
+                    </div>
+                  </figure>
+                </sc-for>
+              </div>
+              <div aria-live="polite" style="position:absolute;top:12px;right:calc({{ trackPad }} + 12px);background:rgba(22,24,26,.78);color:#fff;font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;font-variant-numeric:tabular-nums;pointer-events:none">{{ slideLabel }}</div>
+            </div>
+          </sc-if>
+        </div>
+
+        <aside ref="{{ cardRef }}" aria-labelledby="product-title" style="position:{{ cardPos }};top:{{ cardTop }}px;min-width:0">
+          <div style="background:#E4E7E9;border-radius:24px;padding:0">
+          <div aria-label="Своё производство под Валенсией · Монтаж в радиусе 200 км · Доставка по всей Испании" style="overflow:hidden;padding:14px 0 13px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent,#000 28px,#000 calc(100% - 28px),transparent)">
+          <div data-marquee="" aria-hidden="true" style="display:flex;width:max-content;animation:plMarquee 30s linear infinite;font-size:14px;font-weight:500;color:#26292C;white-space:nowrap">
+            <ul style="list-style:none;margin:0;padding:0 10px 0 0;display:flex;align-items:center;gap:10px">
+              <li>Своё производство под Валенсией</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Монтаж в радиусе 200 км</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Доставка по всей Испании</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Своё производство под Валенсией</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Монтаж в радиусе 200 км</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Доставка по всей Испании</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+            </ul>
+            <ul style="list-style:none;margin:0;padding:0 10px 0 0;display:flex;align-items:center;gap:10px">
+              <li>Своё производство под Валенсией</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Монтаж в радиусе 200 км</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Доставка по всей Испании</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Своё производство под Валенсией</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Монтаж в радиусе 200 км</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+              <li>Доставка по всей Испании</li>
+              <li style="width:4px;height:4px;border-radius:50%;background:#7E8A92"></li>
+            </ul>
+          </div>
+          </div>
+          <div style="background:#fff;border-radius:19px;padding:clamp(20px,2vw,28px);box-shadow:0 10px 24px -18px rgba(22,24,26,.35)">
+          <h1 id="product-title" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(30px,3.1vw,44px);line-height:1.08;letter-spacing:-0.03em;margin:0;text-wrap:balance"><span style="color:#8D9195">Сетки плиссе</span> на заказ</h1>
+          <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:#41464A;text-wrap:pretty">Складываются гармошкой, убираются в несколько сантиметров и пропускают воздух без комаров. Для окон, дверей и широких выходов на террасу.</p>
+
+          <div style="margin-top:22px;display:flex;flex-direction:column;align-items:flex-start;gap:6px">
+            <div style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(26px,2.4vw,32px);letter-spacing:-0.02em;white-space:nowrap">От 52 €</div>
+            <div style="font-size:14px;color:#5A5F63;display:flex;align-items:center;gap:7px"><span aria-hidden="true" style="flex:0 0 auto;width:18px;height:18px;border-radius:50%;background:#E24C2B;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:12px;line-height:1">!</span>цена зависит от размеров проёма</div>
+          </div>
+
+
+          <div role="group" aria-label="Параметры сетки" style="margin-top:26px;display:flex;flex-direction:column;gap:10px">
+            <button type="button" onClick="{{ openConfig }}" aria-haspopup="dialog" style="width:100%;min-height:62px;display:flex;align-items:center;gap:14px;padding:10px 16px 10px 18px;background:#fff;border:1px solid #D9D5D0;border-radius:14px;cursor:pointer;text-align:left;color:#16181A;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#16181A;box-shadow:0 6px 20px -10px rgba(22,24,26,.25);--cb:#16181A;--cg:none;--ck:#FFFFFF;--chl:0;--crg:0;--cx:3px;--csy:6px;--csb:14px;--csa:.22" style-active="--cs:.9;--cx:3px;--cb:#000;--cg:none;--chl:0;--ck:#FFFFFF">
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px">
+                <span style="font-size:13px;color:#5A5F63;line-height:1.3">Конфигурация</span>
+                <span style="font-size:15.5px;font-weight:600;line-height:1.35">{{ config }}</span>
+              </span>
+              <span aria-hidden="true" style="flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:var(--cb,#F4F2EF);background-image:var(--cg,linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.025) 100%));box-shadow:inset 0 1px 0 rgba(255,255,255,var(--chl,1)),inset 0 -1px 0 rgba(22,24,26,.04),0 0 0 .5px rgba(22,24,26,var(--crg,.10)),0 1px 2px rgba(22,24,26,.07),0 var(--csy,3px) var(--csb,10px) rgba(22,24,26,var(--csa,.07));transform:translateX(var(--cx,0)) scale(var(--cs,1));transition:background-color .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="display:block;margin-left:1.5px;overflow:visible"><path d="M4.4 2.4 C6.2 4 7.7 5.15 7.7 6 C7.7 6.85 6.2 8 4.4 9.6" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--ck,#16181A);transition:stroke .35s ease"></path></svg></span>
+            </button>
+            <button type="button" onClick="{{ openFabric }}" aria-haspopup="dialog" style="width:100%;min-height:62px;display:flex;align-items:center;gap:14px;padding:10px 16px 10px 18px;background:#fff;border:1px solid #D9D5D0;border-radius:14px;cursor:pointer;text-align:left;color:#16181A;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#16181A;box-shadow:0 6px 20px -10px rgba(22,24,26,.25);--cb:#16181A;--cg:none;--ck:#FFFFFF;--chl:0;--crg:0;--cx:3px;--csy:6px;--csb:14px;--csa:.22" style-active="--cs:.9;--cx:3px;--cb:#000;--cg:none;--chl:0;--ck:#FFFFFF">
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px">
+                <span style="font-size:13px;color:#5A5F63;line-height:1.3">Полотно</span>
+                <span style="font-size:15.5px;font-weight:600;line-height:1.35">{{ fabric }}</span>
+              </span>
+              <span aria-hidden="true" style="flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:var(--cb,#F4F2EF);background-image:var(--cg,linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.025) 100%));box-shadow:inset 0 1px 0 rgba(255,255,255,var(--chl,1)),inset 0 -1px 0 rgba(22,24,26,.04),0 0 0 .5px rgba(22,24,26,var(--crg,.10)),0 1px 2px rgba(22,24,26,.07),0 var(--csy,3px) var(--csb,10px) rgba(22,24,26,var(--csa,.07));transform:translateX(var(--cx,0)) scale(var(--cs,1));transition:background-color .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="display:block;margin-left:1.5px;overflow:visible"><path d="M4.4 2.4 C6.2 4 7.7 5.15 7.7 6 C7.7 6.85 6.2 8 4.4 9.6" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--ck,#16181A);transition:stroke .35s ease"></path></svg></span>
+            </button>
+            <button type="button" onClick="{{ openColor }}" aria-haspopup="dialog" style="width:100%;min-height:62px;display:flex;align-items:center;gap:14px;padding:10px 16px 10px 18px;background:#fff;border:1px solid #D9D5D0;border-radius:14px;cursor:pointer;text-align:left;color:#16181A;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#16181A;box-shadow:0 6px 20px -10px rgba(22,24,26,.25);--cb:#16181A;--cg:none;--ck:#FFFFFF;--chl:0;--crg:0;--cx:3px;--csy:6px;--csb:14px;--csa:.22" style-active="--cs:.9;--cx:3px;--cb:#000;--cg:none;--chl:0;--ck:#FFFFFF">
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px">
+                <span style="font-size:13px;color:#5A5F63;line-height:1.3">Цвет профиля</span>
+                <span style="display:flex;align-items:center;gap:8px;font-size:15.5px;font-weight:600;line-height:1.35"><span aria-hidden="true" style="width:14px;height:14px;border-radius:50%;flex:0 0 auto;box-shadow:0 0 0 1px rgba(22,24,26,.2);background:{{ colorBg }}"></span>{{ color }}</span>
+              </span>
+              <span aria-hidden="true" style="flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:var(--cb,#F4F2EF);background-image:var(--cg,linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.025) 100%));box-shadow:inset 0 1px 0 rgba(255,255,255,var(--chl,1)),inset 0 -1px 0 rgba(22,24,26,.04),0 0 0 .5px rgba(22,24,26,var(--crg,.10)),0 1px 2px rgba(22,24,26,.07),0 var(--csy,3px) var(--csb,10px) rgba(22,24,26,var(--csa,.07));transform:translateX(var(--cx,0)) scale(var(--cs,1));transition:background-color .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="display:block;margin-left:1.5px;overflow:visible"><path d="M4.4 2.4 C6.2 4 7.7 5.15 7.7 6 C7.7 6.85 6.2 8 4.4 9.6" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--ck,#16181A);transition:stroke .35s ease"></path></svg></span>
+            </button>
+            <button type="button" onClick="{{ openSize }}" aria-haspopup="dialog" style="width:100%;min-height:62px;display:flex;align-items:center;gap:14px;padding:10px 16px 10px 18px;background:#fff;border:1px solid #D9D5D0;border-radius:14px;cursor:pointer;text-align:left;color:#16181A;transition:border-color .3s,box-shadow .3s" style-hover="border-color:#16181A;box-shadow:0 6px 20px -10px rgba(22,24,26,.25);--cb:#16181A;--cg:none;--ck:#FFFFFF;--chl:0;--crg:0;--cx:3px;--csy:6px;--csb:14px;--csa:.22" style-active="--cs:.9;--cx:3px;--cb:#000;--cg:none;--chl:0;--ck:#FFFFFF">
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:1px">
+                <span style="font-size:13px;color:#5A5F63;line-height:1.3">Размеры проёма</span>
+                <span style="font-size:15.5px;font-weight:600;line-height:1.35">{{ sizeLabel }}</span>
+              </span>
+              <span aria-hidden="true" style="flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background-color:var(--cb,#F4F2EF);background-image:var(--cg,linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 55%,rgba(0,0,0,.025) 100%));box-shadow:inset 0 1px 0 rgba(255,255,255,var(--chl,1)),inset 0 -1px 0 rgba(22,24,26,.04),0 0 0 .5px rgba(22,24,26,var(--crg,.10)),0 1px 2px rgba(22,24,26,.07),0 var(--csy,3px) var(--csb,10px) rgba(22,24,26,var(--csa,.07));transform:translateX(var(--cx,0)) scale(var(--cs,1));transition:background-color .45s cubic-bezier(.22,1,.36,1),box-shadow .45s cubic-bezier(.22,1,.36,1),transform .45s cubic-bezier(.22,1,.36,1)"><svg width="14" height="14" viewBox="0 0 12 12" fill="none" style="display:block;margin-left:1.5px;overflow:visible"><path d="M4.4 2.4 C6.2 4 7.7 5.15 7.7 6 C7.7 6.85 6.2 8 4.4 9.6" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--ck,#16181A);transition:stroke .35s ease"></path></svg></span>
+            </button>
+          </div>
+
+          <div style="margin-top:22px;display:flex;flex-direction:column;gap:10px">
+            <dc-import name="Button" label="Запросить расчёт" size="lg" block="{{ true }}" haspopup="dialog" on-press="{{ openRequest }}" hint-size="100%,56px"></dc-import>
+            <dc-import name="Button" label="Написать в WhatsApp" variant="outline" icon="whatsapp" block="{{ true }}" href="https://wa.me/34000000000" target="_blank" hint-size="100%,52px"></dc-import>
+          </div>
+
+          </div>
+          </div>
+
+          <div style="margin-top:14px;background:#FEF6EE;border-radius:20px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start">
+            <span aria-hidden="true" style="flex:0 0 auto;width:44px;height:44px;border-radius:14px;background:#fff;box-shadow:0 1px 2px rgba(22,24,26,.05),0 8px 18px -10px rgba(226,76,43,.45);display:flex;align-items:center;justify-content:center">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="#E24C2B" stroke-linecap="round" stroke-linejoin="round" style="display:block">
+                <path d="M6 3.5h14" stroke-width="1.4"></path><path d="M6 2v3M20 2v3" stroke-width="1.4"></path>
+                <path d="M2.5 9v14" stroke-width="1.4"></path><path d="M1 9h3M1 23h3" stroke-width="1.4"></path>
+                <rect x="6.5" y="8.5" width="13" height="15" rx="2.5" stroke-width="1.7"></rect>
+                <path d="M10.6 11.5v9M13 11.5v9M15.4 11.5v9" stroke-width="1.3" stroke-opacity=".55"></path>
+              </svg>
+            </span>
+            <div>
+              <div style="font-size:14px;color:#41464A">Делаем по вашим размерам</div>
+              <div style="margin-top:2px;font-weight:600;font-size:16px;line-height:1.35">Готово к установке за 10–12 рабочих дней.</div>
+              <div style="margin-top:4px;font-size:14.5px;color:#41464A">Замер без обязательств до начала работы.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:28px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <h2 style="flex:1;margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:19px;letter-spacing:-0.01em">Входит в цену</h2>
+              <button type="button" onClick="{{ carPrev }}" aria-label="Назад" style="width:44px;height:44px;border-radius:999px;border:1px solid #D9D5D0;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:#16181A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16181A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+              <button type="button" onClick="{{ carNext }}" aria-label="Вперёд" style="width:44px;height:44px;border-radius:999px;border:1px solid #D9D5D0;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="border-color:#16181A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16181A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+            </div>
+            <ul ref="{{ carRef }}" style="list-style:none;margin:14px 0 0;padding:0 0 4px;display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none">
+              <sc-for list="{{ perks }}" as="p" hint-placeholder-count="3">
+                <li style="flex:0 0 148px;scroll-snap-align:start">
+                  <div style="position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:#ECE9E5">
+                    <image-slot id="{{ p.id }}" src="{{ p.src }}" shape="rounded" radius="12" placeholder="{{ p.desc }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                    <sc-if value="{{ p.paid }}" hint-placeholder-val="{{ false }}">
+                      <button type="button" onClick="{{ p.toggle }}" aria-pressed="{{ p.pressed }}" aria-label="{{ p.addLabel }}" style="position:absolute;right:8px;bottom:8px;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:{{ p.addBg }};box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 0 0 .5px rgba(22,24,26,.08),0 4px 12px -2px rgba(22,24,26,.28);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);cursor:pointer;transition:background .4s cubic-bezier(.22,1,.36,1),transform .35s cubic-bezier(.22,1,.36,1);outline-offset:2px" style-hover="transform:scale(1.08)" style-active="transform:scale(.9)">
+                        <span aria-hidden="true" style="position:absolute;inset:0;transform:rotate({{ p.rot }});transition:transform .5s cubic-bezier(.34,1.56,.64,1)">
+                          <span style="position:absolute;left:11.25px;top:17.25px;width:13.5px;height:1.5px;border-radius:1px;background:{{ p.addFg }};transition:background .3s ease"></span>
+                          <span style="position:absolute;left:17.25px;top:11.25px;width:1.5px;height:13.5px;border-radius:1px;background:{{ p.addFg }};transition:background .3s ease"></span>
+                        </span>
+                      </button>
+                    </sc-if>
+                  </div>
+                  <div style="margin-top:9px;font-size:14px;font-weight:600;line-height:1.3">{{ p.name }}</div>
+                  <div style="margin-top:3px;font-size:12.5px;color:{{ p.tagColor }}">{{ p.tag }}</div>
+                </li>
+              </sc-for>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section aria-labelledby="about-title" style="background:#F2F0ED;padding:clamp(56px,8vw,104px) 0">
+      <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);display:grid;grid-template-columns:{{ descCols }};gap:clamp(36px,5vw,80px);align-items:start">
+        <div>
+          <h2 id="about-title" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.2vw,36px);line-height:1.15;letter-spacing:-0.025em;margin:0 0 clamp(20px,2.4vw,28px);text-wrap:balance"><span style="color:#8D9195">Как устроена</span> сетка плиссе</h2>
+          <div style="max-width:64ch;font-size:17px;line-height:1.65;color:#2C3033;display:flex;flex-direction:column;gap:18px">
+            <p style="margin:0;text-wrap:pretty">Сетка плиссе не сматывается в рулон и не занимает половину окна: полотно складывается само в себя и прячется в узкий профиль у рамы. Остаётся там, где вы её оставили — открытой полностью, наполовину или закрытой.</p>
+            <p style="margin:0;text-wrap:pretty">Нижняя направляющая плоская, поэтому под ногами нет порога: можно пройти с занятыми руками или провезти коляску. Из-за этого сетки плиссе особенно хорошо работают на дверях террасы и выходах в сад, где за день проходят десятки раз.</p>
+            <p style="margin:0;text-wrap:pretty">Каждая сетка делается по размерам вашего проёма и ставится на существующую раму, без переделок.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,1.6vw,24px)">
+          <figure style="margin:0">
+            <div style="position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:#E4E0DB">
+              <img src="img/plisse-rail.jpg" alt="Плоская нижняя направляющая сетки плиссе у порога террасы" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+            </div>
+            <figcaption style="margin-top:10px;font-size:14px;color:#41464A">Плоская нижняя направляющая</figcaption>
+          </figure>
+          <figure style="margin:0">
+            <div style="position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:#E4E0DB">
+              <img src="img/plisse-mesh-sky.jpg" alt="Складки полотна сетки плиссе на просвет против неба" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block" />
+            </div>
+            <figcaption style="margin-top:10px;font-size:14px;color:#41464A">Полотно на просвет</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices" aria-labelledby="prices-title" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,104px)">
+      <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
+        <div style="padding-top:clamp(48px,6vw,80px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 40px">
+          <h2 id="prices-title" style="flex:1 1 380px;min-width:0;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.2vw,36px);line-height:1.15;letter-spacing:-0.025em;margin:0;text-wrap:balance"><span style="color:#8D9195">Сколько стоит</span> сетка плиссе</h2>
+          <p style="flex:0 1 46ch;min-width:0;margin:0;font-size:17px;line-height:1.6;color:#41464A;text-wrap:pretty">Цены на типовые проёмы без монтажа. Для своего размера цена считается по сетке с шагом 10 см.</p>
+        </div>
+
+        <sc-if value="{{ priceTable }}" hint-placeholder-val="{{ true }}">
+          <table style="margin-top:calc(clamp(24px,2.6vw,32px) - 12px);width:100%;border-collapse:collapse;table-layout:fixed">
+            <caption style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Цены на сетки плиссе для типовых проёмов без монтажа</caption>
+            <thead>
+              <tr>
+                <th scope="col" style="text-align:left;position:sticky;top:{{ stickyTop }}px;z-index:5;background:#F2F0ED;padding:12px 0 10px;font-weight:inherit"><div style="height:48px;display:flex;align-items:center;padding:0 0 0 6px;background:#16181A;border-radius:999px 0 0 999px;font-family:Rubik,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase"><span style="height:36px;display:flex;align-items:center;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#16181A;box-shadow:inset 0 -1px 0 rgba(22,24,26,.06)">Ситуация</span></div></th>
+                <th scope="col" style="width:{{ cfgW }};text-align:left;position:sticky;top:{{ stickyTop }}px;z-index:5;background:#F2F0ED;padding:12px 0 10px;font-weight:inherit"><div style="height:48px;display:flex;align-items:center;padding:0 24px 0 0;background:#16181A;font-family:Rubik,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase"><span style="height:36px;display:flex;align-items:center;padding:0 18px;margin-left:-18px;border-radius:999px;background:#FFFFFF;color:#16181A;box-shadow:inset 0 -1px 0 rgba(22,24,26,.06)">Конфигурация</span></div></th>
+                <th scope="col" style="width:{{ priceW }};text-align:right;position:sticky;top:{{ stickyTop }}px;z-index:5;background:#F2F0ED;padding:12px 0 10px;font-weight:inherit"><div style="height:48px;display:flex;align-items:center;justify-content:flex-end;padding:0 6px 0 0;background:#16181A;border-radius:0 999px 999px 0;font-family:Rubik,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase"><span style="height:36px;display:flex;align-items:center;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#16181A;box-shadow:inset 0 -1px 0 rgba(22,24,26,.06)">Цена, €</span></div></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Окно в спальне</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">80 × 120 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="4" y="3" width="80" height="58" rx="3" stroke="#16181A" stroke-width="2"></rect><rect x="11" y="10" width="66" height="44" rx="1.5" stroke="#16181A" stroke-width="1.4"></rect><path d="M15 13v38M18 13v38M21 13v38M24 13v38" stroke="#6B7074" stroke-width="1.4"></path><rect x="26" y="13" width="3.5" height="38" fill="#E24C2B"></rect><path d="M36 32h28M58 27.5l6 4.5-6 4.5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 18h4M9 46h4M75 18h4M75 46h4" stroke="#E24C2B" stroke-width="2.4" stroke-linecap="round"></path></svg>Внутренняя на клипсах</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">82 €</span></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Окно в гостиной</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">100 × 140 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="4" y="3" width="80" height="58" rx="3" stroke="#16181A" stroke-width="2"></rect><rect x="11" y="10" width="66" height="44" rx="1.5" stroke="#16181A" stroke-width="1.4"></rect><path d="M15 13v38M18 13v38M21 13v38M24 13v38" stroke="#6B7074" stroke-width="1.4"></path><rect x="26" y="13" width="3.5" height="38" fill="#E24C2B"></rect><path d="M36 32h28M58 27.5l6 4.5-6 4.5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 18h4M9 46h4M75 18h4M75 46h4" stroke="#E24C2B" stroke-width="2.4" stroke-linecap="round"></path></svg>Внутренняя на клипсах</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">95 €</span></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Балконная дверь</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">90 × 220 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="2"></rect><path d="M12 9v46M15 9v46M18 9v46M21 9v46" stroke="#6B7074" stroke-width="1.4"></path><rect x="23" y="9" width="3.5" height="46" fill="#E24C2B"></rect><path d="M34 32h32M60 27l6 5-6 5" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Наружная односторонняя</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">117 €</span></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Выход на террасу</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">180 × 230 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="2"></rect><path d="M12 9v46M15 9v46M18 9v46M70 9v46M73 9v46M76 9v46" stroke="#6B7074" stroke-width="1.4"></path><rect x="20" y="9" width="3.5" height="46" fill="#E24C2B"></rect><rect x="64.5" y="9" width="3.5" height="46" fill="#E24C2B"></rect><path d="M28 32h12M36 28l4 4-4 4M60 32H48M52 28l-4 4 4 4" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 12v40" stroke="#16181A" stroke-width="1.2" stroke-dasharray="2 3"></path></svg>Наружная двухсторонняя</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">248 €</span></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Широкий проём</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">300 × 240 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="2"></rect><path d="M12 9v46M15 9v46M18 9v46M70 9v46M73 9v46M76 9v46" stroke="#6B7074" stroke-width="1.4"></path><rect x="20" y="9" width="3.5" height="46" fill="#E24C2B"></rect><rect x="64.5" y="9" width="3.5" height="46" fill="#E24C2B"></rect><path d="M28 32h12M36 28l4 4-4 4M60 32H48M52 28l-4 4 4 4" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 12v40" stroke="#16181A" stroke-width="1.2" stroke-dasharray="2 3"></path></svg>Наружная двухсторонняя</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">302 €</span></td>
+              </tr>
+              <tr>
+                <th scope="row" style="text-align:left;font-weight:400;padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(19px,1.7vw,22px);line-height:1.25;letter-spacing:-0.01em">Панорамный проём</span>
+                  <span style="display:block;margin-top:4px;font-size:15px;color:#5A5F63;font-variant-numeric:tabular-nums">400 × 250 см</span>
+                </th>
+                <td style="padding:clamp(22px,2.2vw,30px) 24px clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle">
+                  <span style="display:flex;align-items:center;gap:14px;font-size:16px;line-height:1.35;color:#26292C"><svg width="{{ schW }}" height="{{ schH }}" viewBox="0 0 88 64" fill="none" aria-hidden="true" style="flex:0 0 auto"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="2"></rect><path d="M30 9v46M33 9v46M36 9v46M39 9v46" stroke="#6B7074" stroke-width="1.4"></path><rect x="41" y="9" width="3.5" height="46" fill="#E24C2B"></rect><path d="M14 32h10M18 28l-4 4 4 4M52 32h22M70 28l4 4-4 4" stroke="#16181A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Наружная реверсионная</span>
+                </td>
+                <td style="text-align:right;padding:clamp(22px,2.2vw,30px) 0;border-bottom:1px solid #D2CDC7;vertical-align:middle;white-space:nowrap"><span style="font-size:16px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.4vw,34px);letter-spacing:-0.02em;font-variant-numeric:tabular-nums">400 €</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </sc-if>
+
+        <sc-if value="{{ priceList }}" hint-placeholder-val="{{ false }}">
+          <ul aria-label="Цены на типовые проёмы без монтажа" style="list-style:none;margin:24px 0 0;padding:0;border-top:1px solid #16181A">
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Окно в спальне</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">82 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">80 × 120 см · Внутренняя на клипсах</div>
+            </li>
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Окно в гостиной</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">95 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">100 × 140 см · Внутренняя на клипсах</div>
+            </li>
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Балконная дверь</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">117 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">90 × 220 см · Наружная односторонняя</div>
+            </li>
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Выход на террасу</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">248 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">180 × 230 см · Наружная двухсторонняя</div>
+            </li>
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Широкий проём</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">302 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">300 × 240 см · Наружная двухсторонняя</div>
+            </li>
+            <li style="padding:20px 0;border-bottom:1px solid #D2CDC7">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:19px;line-height:1.25">Панорамный проём</span><span style="white-space:nowrap"><span style="font-size:15px;color:#5A5F63">от </span><span style="font-family:Rubik,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.02em;font-variant-numeric:tabular-nums">400 €</span></span></div>
+              <div style="margin-top:4px;font-size:15px;line-height:1.45;color:#5A5F63">400 × 250 см · Наружная реверсионная</div>
+            </li>
+          </ul>
+        </sc-if>
+
+        <p style="margin:18px 0 0;max-width:92ch;font-size:14px;line-height:1.55;color:#5A5F63;text-wrap:pretty">Цены без монтажа и доставки. Производство в 30 км от Валенсии, монтаж в радиусе 200 км, доставка по всей Испании.</p>
+
+        <sc-if value="{{ showExtras }}" hint-placeholder-val="{{ false }}">
+        <div style="margin-top:clamp(48px,6vw,80px)">
+          <h3 style="margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,1.9vw,24px);letter-spacing:-0.015em">Дополнительно</h3>
+          <ul style="list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:{{ modCols }};column-gap:clamp(32px,5vw,72px)">
+            <li style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #D2CDC7"><span style="font-size:16.5px;color:#26292C">Антипыльцевое полотно</span><span style="font-family:Rubik,sans-serif;font-weight:500;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums">+15%</span></li>
+            <li style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #D2CDC7"><span style="font-size:16.5px;color:#26292C">Солнцезащитное полотно</span><span style="font-family:Rubik,sans-serif;font-weight:500;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums">+20%</span></li>
+            <li style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #D2CDC7"><span style="font-size:16.5px;color:#26292C">Усиленное полотно для животных</span><span style="font-family:Rubik,sans-serif;font-weight:500;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums">+25%</span></li>
+            <li style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #D2CDC7"><span style="font-size:16.5px;color:#26292C">Покраска профиля в RAL<span style="display:block;margin-top:2px;font-size:14px;color:#5A5F63">срок +5 рабочих дней</span></span><span style="font-family:Rubik,sans-serif;font-weight:500;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums">+10%</span></li>
+            <li style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-top:1px solid #D2CDC7"><span style="font-size:16.5px;color:#26292C">Выезд за пределы 40 км</span><span style="font-family:Rubik,sans-serif;font-weight:500;font-size:17px;white-space:nowrap;font-variant-numeric:tabular-nums">от 30 €</span></li>
+          </ul>
+        </div>
+        </sc-if>
+
+        <div style="position:relative;overflow:hidden;margin-top:clamp(48px,6vw,80px);padding:clamp(28px,3.6vw,52px) clamp(22px,3.6vw,52px);background:#fff;border:1px solid #E7E3DE;border-radius:clamp(24px,2.6vw,36px);box-shadow:0 1px 2px rgba(22,24,26,.04),0 24px 48px -28px rgba(22,24,26,.18);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 48px">
+          <div style="position:relative;flex:1 1 400px;min-width:0">
+            <p style="margin:0;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(28px,3.8vw,48px);line-height:1.05;letter-spacing:-0.035em;color:#16181A;text-wrap:balance">Нужен <span style="color:#8D9195">другой размер?</span></p>
+            <p style="margin:clamp(12px,1.4vw,18px) 0 0;max-width:40ch;font-size:17px;line-height:1.55;color:#41464A;text-wrap:pretty">Рассчитайте цену по своим габаритам или пришлите их нам.</p>
+          </div>
+          <div style="position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;flex:{{ ctaFlex }}">
+            <dc-import name="Button" label="Рассчитать свой размер" size="lg" block="{{ true }}" haspopup="dialog" on-press="{{ openSize }}" style="flex:{{ ctaFlex }}" hint-size="260px,56px"></dc-import>
+            <dc-import name="Button" label="Написать в WhatsApp" variant="outline" icon="whatsapp" size="lg" href="https://wa.me/34000000000" target="_blank" style="flex:{{ ctaFlex }}" block="{{ true }}" hint-size="240px,56px"></dc-import>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" aria-labelledby="process-title" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,104px)">
+      <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
+        <div style="background:#16181A;color:#fff;border-radius:clamp(24px,2.6vw,36px);padding:clamp(28px,4.4vw,64px) clamp(20px,4.4vw,64px)">
+          <h2 id="process-title" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(26px,3.6vw,44px);line-height:1.1;letter-spacing:-0.03em;margin:0;max-width:20ch;text-wrap:balance">От размеров до <span style="color:#3A4851">установленной сетки</span></h2>
+
+          <ol style="list-style:none;margin:clamp(44px,6vw,88px) 0 0;padding:0;display:grid;grid-template-columns:{{ procCols }};gap:clamp(36px,4vw,56px) clamp(28px,3.2vw,48px)">
+            <li style="display:flex;flex-direction:column;padding-top:24px;border-top:2px solid #E24C2B">
+              <h3 style="margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;letter-spacing:-0.015em">Расчёт</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.55;color:#C9D0D4;text-wrap:pretty">Вводите размеры проёма и сразу видите цену.</p>
+              <p style="margin:auto 0 0;padding-top:28px;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.6vw,36px);line-height:1.1;letter-spacing:-0.03em;color:#fff;font-variant-numeric:tabular-nums;text-wrap:balance">2 минуты</p>
+            </li>
+            <li style="display:flex;flex-direction:column;padding-top:24px;border-top:2px solid #343B41">
+              <h3 style="margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;letter-spacing:-0.015em">Замер</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.55;color:#C9D0D4;text-wrap:pretty">Приезжаем и проверяем проём до запуска в работу.</p>
+              <p style="margin:auto 0 0;padding-top:28px;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.6vw,36px);line-height:1.1;letter-spacing:-0.03em;color:#fff;font-variant-numeric:tabular-nums;text-wrap:balance">1 визит</p>
+            </li>
+            <li style="display:flex;flex-direction:column;padding-top:24px;border-top:2px solid #343B41">
+              <h3 style="margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;letter-spacing:-0.015em">Производство</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.55;color:#C9D0D4;text-wrap:pretty">Делаем сетку по вашим размерам под Валенсией.</p>
+              <p style="margin:auto 0 0;padding-top:28px;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.6vw,36px);line-height:1.1;letter-spacing:-0.03em;color:#fff;font-variant-numeric:tabular-nums;text-wrap:balance">10–12 рабочих дней</p>
+            </li>
+            <li style="display:flex;flex-direction:column;padding-top:24px;border-top:2px solid #343B41">
+              <h3 style="margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,1.8vw,24px);line-height:1.2;letter-spacing:-0.015em">Установка</h3>
+              <p style="margin:10px 0 0;font-size:16px;line-height:1.55;color:#C9D0D4;text-wrap:pretty">Ставим на существующую раму, без переделок.</p>
+              <p style="margin:auto 0 0;padding-top:28px;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(26px,2.6vw,36px);line-height:1.1;letter-spacing:-0.03em;color:#fff;font-variant-numeric:tabular-nums;text-wrap:balance">около часа</p>
+            </li>
+          </ol>
+
+          <div style="margin-top:clamp(48px,6vw,80px);display:flex;align-items:center;gap:clamp(16px,2vw,24px);padding:clamp(18px,2vw,24px) clamp(20px,2.4vw,32px);background:#1F2428;border:1px solid #2A3136;border-radius:20px;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)">
+            <span aria-hidden="true" style="flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:#2A3136;box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="display:block"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="#F58A6C" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.3" stroke="#F58A6C" stroke-width="1.6"></circle></svg></span>
+            <p style="flex:1;min-width:0;margin:0;font-size:16px;line-height:1.55;color:#9AA5AB;text-wrap:pretty"><strong style="font-family:Rubik,sans-serif;font-weight:600;color:#fff">Живёте дальше 200 км от Валенсии?</strong> Замеряете сами по нашей инструкции, сетку доставим по всей Испании.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <dc-import name="WorksBlock" hint-size="100%,820px"></dc-import>
+
+    <dc-import name="ReviewsBlock" hint-size="100%,640px"></dc-import>
+
+    <dc-import name="FaqBlock" hint-size="100%,760px"></dc-import>
+
+    <section id="related" aria-labelledby="related-title" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,100px)">
+      <div style="max-width:1360px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(16px,3vw,32px) 0">
+        <div style="border-top:1px solid #DAD5CE;padding-top:clamp(40px,5vw,64px)">
+          <h2 id="related-title" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.2vw,36px);line-height:1.15;letter-spacing:-0.025em;margin:0 0 clamp(28px,3.6vw,48px);text-wrap:balance">Что ещё <span style="color:#8D9195">мы делаем</span></h2>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(12px,1.6vw,20px)">
+            <a href="#" style="background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px);color:#16181A;text-decoration:none;--ri:1;--ra:0" style-hover="color:#16181A;--ri:1.04;--ra:3px">
+              <span style="display:block;position:relative;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);overflow:hidden"><span style="position:absolute;inset:0;background-image:url('img/pleated-screen.jpg');background-size:cover;background-position:center;transform:scale(var(--ri));transition:transform .9s cubic-bezier(.22,1,.36,1)"></span></span>
+              <span style="display:flex;flex-direction:column;gap:8px;padding:0 clamp(4px,0.6vw,8px)">
+                <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15">Другие москитные сетки</span>
+                <span style="font-size:14.5px;line-height:1.5;color:#4A4F53;text-wrap:pretty">Раздвижные, рулонные, фиксированные, распашные и для мансардных окон.</span>
+              </span>
+              <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:center;justify-content:space-between;gap:14px">
+                <span style="font-size:15px;font-weight:600">Все москитные сетки</span>
+                <span style="flex:0 0 auto;width:48px;height:48px;border-radius:999px;background:#E24C2B;display:flex;align-items:center;justify-content:center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:translateX(var(--ra));transition:transform .45s cubic-bezier(.22,1,.36,1)"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+                </span>
+              </span>
+            </a>
+
+            <a href="#" style="background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px);color:#16181A;text-decoration:none;--ri:1;--ra:0" style-hover="color:#16181A;--ri:1.04;--ra:3px">
+              <span style="display:block;position:relative;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);overflow:hidden"><span style="position:absolute;inset:0;background-image:url('img/sliding-windows.jpg');background-size:cover;background-position:center;transform:scale(var(--ri));transition:transform .9s cubic-bezier(.22,1,.36,1)"></span></span>
+              <span style="display:flex;flex-direction:column;gap:8px;padding:0 clamp(4px,0.6vw,8px)">
+                <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15">Раздвижные окна</span>
+                <span style="font-size:14.5px;line-height:1.5;color:#4A4F53;text-wrap:pretty">Алюминиевые системы и безрамное остекление.</span>
+              </span>
+              <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:center;justify-content:space-between;gap:14px">
+                <span style="font-size:15px;font-weight:600">Смотреть раздвижные окна</span>
+                <span style="flex:0 0 auto;width:48px;height:48px;border-radius:999px;background:#E24C2B;display:flex;align-items:center;justify-content:center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:translateX(var(--ra));transition:transform .45s cubic-bezier(.22,1,.36,1)"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+                </span>
+              </span>
+            </a>
+
+            <a href="#" style="background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px);color:#16181A;text-decoration:none;--ri:1;--ra:0" style-hover="color:#16181A;--ri:1.04;--ra:3px">
+              <span style="display:block;position:relative;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);overflow:hidden"><span style="position:absolute;inset:0;background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center;transform:scale(var(--ri));transition:transform .9s cubic-bezier(.22,1,.36,1)"></span></span>
+              <span style="display:flex;flex-direction:column;gap:8px;padding:0 clamp(4px,0.6vw,8px)">
+                <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15">Зимние сады</span>
+                <span style="font-size:14.5px;line-height:1.5;color:#4A4F53;text-wrap:pretty">Остекление террас и зимние сады на заказ.</span>
+              </span>
+              <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:center;justify-content:space-between;gap:14px">
+                <span style="font-size:15px;font-weight:600">Смотреть зимние сады</span>
+                <span style="flex:0 0 auto;width:48px;height:48px;border-radius:999px;background:#E24C2B;display:flex;align-items:center;justify-content:center">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:translateX(var(--ra));transition:transform .45s cubic-bezier(.22,1,.36,1)"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dc-import name="SiteFooter" home="/" bottom-space="{{ footerPad }}" hint-size="100%,640px"></dc-import>
+
+  <sc-if value="{{ phoneBar }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;left:0;right:0;bottom:0;z-index:80;background:#fff;border-top:1px solid #E7E4E0;box-shadow:0 -8px 24px -12px rgba(22,24,26,.25);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;transform:translateY({{ barT }});transition:transform .35s cubic-bezier(.16,1,.3,1)">
+      <div style="flex:1;min-width:0">
+        <div style="font-family:Rubik,sans-serif;font-weight:700;font-size:19px;line-height:1.2;white-space:nowrap">От 52 €</div>
+        <div style="font-size:12px;color:#5A5F63;line-height:1.3;display:flex;align-items:center;gap:5px"><span aria-hidden="true" style="flex:0 0 auto;width:14px;height:14px;border-radius:50%;background:#E24C2B;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:10px;line-height:1">!</span>цена зависит от размеров проёма</div>
+      </div>
+      <dc-import name="Button" label="Запросить расчёт" size="sm" tab-index="{{ barTab }}" on-press="{{ openRequest }}" style="flex:0 0 auto" hint-size="170px,46px"></dc-import>
+    </div>
+  </sc-if>
+
+  <div aria-hidden="{{ ovHidden }}" style="position:fixed;inset:0;z-index:200;visibility:{{ ovVis }};pointer-events:{{ ovPE }};transition:visibility .4s">
+    <div onClick="{{ closePanel }}" style="position:absolute;inset:0;background:rgba(22,24,26,.5);opacity:{{ scrimOp }};transition:opacity .35s ease"></div>
+    <div role="dialog" aria-modal="true" aria-labelledby="panel-title" style="position:absolute;right:0;bottom:0;width:{{ pW }};height:{{ pH }};max-height:{{ pMax }};border-radius:{{ pR }};background:#fff;display:flex;flex-direction:column;transform:{{ pT }};transition:transform .42s cubic-bezier(.16,1,.3,1);box-shadow:0 -12px 40px -16px rgba(22,24,26,.35)">
+      <sc-if value="{{ sheet }}" hint-placeholder-val="{{ false }}">
+        <div aria-hidden="true" style="width:40px;height:4px;border-radius:4px;background:#D7D3CE;margin:10px auto 0;flex:0 0 auto"></div>
+      </sc-if>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 16px 14px clamp(20px,3vw,28px);border-bottom:1px solid #EEEBE7;flex:0 0 auto">
+        <h2 id="panel-title" style="flex:1;margin:0;font-family:Rubik,sans-serif;font-weight:600;font-size:20px;letter-spacing:-0.015em">{{ panelTitle }}</h2>
+        <button type="button" ref="{{ closeRef }}" onClick="{{ closePanel }}" aria-label="Закрыть" style="width:44px;height:44px;border-radius:999px;border:0;background:#F2F0ED;display:flex;align-items:center;justify-content:center;cursor:pointer" style-hover="background:#E7E4E0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16181A" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+      </div>
+
+      <div style="flex:1 1 auto;overflow-y:auto;padding:20px clamp(20px,3vw,28px) calc(28px + env(safe-area-inset-bottom));overscroll-behavior:contain">
+
+        <sc-if value="{{ kConfig }}" hint-placeholder-val="{{ false }}">
+          <div role="radiogroup" aria-labelledby="panel-title" style="display:flex;flex-direction:column;gap:10px">
+            <sc-for list="{{ configOpts }}" as="o" hint-placeholder-count="3">
+              <button type="button" role="radio" aria-checked="{{ o.ariaChecked }}" onClick="{{ o.click }}" style="display:flex;align-items:center;gap:16px;width:100%;text-align:left;padding:12px 16px 12px 12px;border:0;border-radius:14px;background:#fff;box-shadow:{{ o.ring }};cursor:pointer;color:#16181A;min-height:88px">
+                <span style="flex:0 0 auto;width:96px;height:70px;border-radius:10px;background:#F2F0ED;display:flex;align-items:center;justify-content:center">
+                  <sc-if value="{{ o.isSingle }}" hint-placeholder-val="{{ false }}">
+                    <svg width="88" height="64" viewBox="0 0 88 64" fill="none" aria-hidden="true"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="1.6"></rect><path d="M12 9v46M15 9v46M18 9v46M21 9v46" stroke="#6B7074" stroke-width="1.2"></path><rect x="23" y="9" width="3" height="46" fill="#E24C2B"></rect><path d="M34 32h32M60 27l6 5-6 5" stroke="#16181A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </sc-if>
+                  <sc-if value="{{ o.isDouble }}" hint-placeholder-val="{{ false }}">
+                    <svg width="88" height="64" viewBox="0 0 88 64" fill="none" aria-hidden="true"><rect x="8" y="6" width="72" height="52" rx="2" stroke="#16181A" stroke-width="1.6"></rect><path d="M12 9v46M15 9v46M18 9v46M70 9v46M73 9v46M76 9v46" stroke="#6B7074" stroke-width="1.2"></path><rect x="20" y="9" width="3" height="46" fill="#E24C2B"></rect><rect x="65" y="9" width="3" height="46" fill="#E24C2B"></rect><path d="M28 32h12M36 28l4 4-4 4M60 32H48M52 28l-4 4 4 4" stroke="#16181A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44 12v40" stroke="#16181A" stroke-width="1" stroke-dasharray="2 3"></path></svg>
+                  </sc-if>
+                  <sc-if value="{{ o.isVertical }}" hint-placeholder-val="{{ false }}">
+                    <svg width="88" height="64" viewBox="0 0 88 64" fill="none" aria-hidden="true"><rect x="24" y="4" width="40" height="56" rx="2" stroke="#16181A" stroke-width="1.6"></rect><path d="M27 8h34M27 11h34M27 14h34" stroke="#6B7074" stroke-width="1.2"></path><rect x="27" y="16" width="34" height="3" fill="#E24C2B"></rect><path d="M44 26v24M39 45l5 5 5-5" stroke="#16181A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </sc-if>
+                </span>
+                <span style="flex:1;min-width:0">
+                  <span style="display:block;font-weight:600;font-size:16px;line-height:1.3">{{ o.name }}</span>
+                  <span style="display:block;margin-top:3px;font-size:14px;color:#5A5F63;line-height:1.4">{{ o.note }}</span>
+                </span>
+                <sc-if value="{{ o.sel }}" hint-placeholder-val="{{ false }}">
+                  <span aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#16181A;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+                </sc-if>
+                <sc-if value="{{ o.notSel }}" hint-placeholder-val="{{ true }}">
+                  <span aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:1.5px solid #B9B4AE"></span>
+                </sc-if>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ kFabric }}" hint-placeholder-val="{{ false }}">
+          <div role="radiogroup" aria-labelledby="panel-title" style="display:flex;flex-direction:column;gap:12px">
+            <sc-for list="{{ fabricOpts }}" as="o" hint-placeholder-count="4">
+              <button type="button" role="radio" aria-checked="{{ o.ariaChecked }}" onClick="{{ o.click }}" style="display:block;width:100%;text-align:left;padding:10px;border:0;border-radius:16px;background:#fff;box-shadow:{{ o.ring }};cursor:pointer;color:#16181A">
+                <span style="display:block;position:relative;aspect-ratio:16/8;border-radius:10px;overflow:hidden;background:#ECE9E5">
+                  <image-slot id="{{ o.id }}" shape="rounded" radius="10" placeholder="{{ o.desc }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+                </span>
+                <span style="display:flex;align-items:center;gap:14px;padding:12px 6px 4px">
+                  <span style="flex:1;min-width:0">
+                    <span style="display:block;font-weight:600;font-size:16px;line-height:1.3">{{ o.name }}</span>
+                    <span style="display:block;margin-top:3px;font-size:14px;color:#5A5F63;line-height:1.4">{{ o.note }}</span>
+                  </span>
+                  <sc-if value="{{ o.sel }}" hint-placeholder-val="{{ false }}">
+                    <span aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#16181A;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+                  </sc-if>
+                  <sc-if value="{{ o.notSel }}" hint-placeholder-val="{{ true }}">
+                    <span aria-hidden="true" style="flex:0 0 auto;width:24px;height:24px;border-radius:50%;border:1.5px solid #B9B4AE"></span>
+                  </sc-if>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ kColor }}" hint-placeholder-val="{{ false }}">
+          <div role="radiogroup" aria-labelledby="panel-title" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:10px;row-gap:22px">
+            <sc-for list="{{ colorOpts }}" as="o" hint-placeholder-count="6">
+              <button type="button" role="radio" aria-checked="{{ o.ariaChecked }}" onClick="{{ o.click }}" style="display:flex;flex-direction:column;align-items:center;gap:10px;border:0;background:transparent;cursor:pointer;color:#16181A;padding:6px 4px;border-radius:12px" style-hover="background:#F7F5F3">
+                <span style="position:relative;width:72px;height:72px;border-radius:50%;background:{{ o.bg }};box-shadow:{{ o.ring }}">
+                  <sc-if value="{{ o.sel }}" hint-placeholder-val="{{ false }}">
+                    <span aria-hidden="true" style="position:absolute;right:-4px;bottom:-4px;width:24px;height:24px;border-radius:50%;background:#16181A;border:2px solid #fff;display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+                  </sc-if>
+                </span>
+                <span style="font-size:13.5px;line-height:1.3;text-align:center;font-weight:{{ o.weight }}">{{ o.name }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <p style="margin:28px 0 0;padding-top:18px;border-top:1px solid #EEEBE7;font-size:14px;line-height:1.5;color:#5A5F63">Цвета на экране передаются приблизительно — реальный образец покажем при замере.</p>
+        </sc-if>
+
+        <sc-if value="{{ kSize }}" hint-placeholder-val="{{ false }}">
+          <form onSubmit="{{ saveSize }}" novalidate="" style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Ширина, см
+                <input value="{{ sw }}" onChange="{{ onSw }}" inputMode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="например, 180" aria-describedby="size-hint size-err" style="min-height:52px;border:1px solid {{ sizeBorder }};border-radius:12px;padding:0 14px;font-size:17px;color:#16181A;background:#fff;font-variant-numeric:tabular-nums" />
+              </label>
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Высота, см
+                <input value="{{ sh }}" onChange="{{ onSh }}" inputMode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="например, 220" aria-describedby="size-hint size-err" style="min-height:52px;border:1px solid {{ sizeBorder }};border-radius:12px;padding:0 14px;font-size:17px;color:#16181A;background:#fff;font-variant-numeric:tabular-nums" />
+              </label>
+            </div>
+            <sc-if value="{{ hasSizeErr }}" hint-placeholder-val="{{ false }}">
+              <p id="size-err" role="alert" style="margin:-6px 0 0;font-size:14px;color:#B3321A">{{ sizeErr }}</p>
+            </sc-if>
+            <p id="size-hint" style="margin:0;font-size:14px;line-height:1.5;color:#5A5F63">До 1,80 × 2,60 м на створку; в двустворчатом варианте — проём до 3,60 м в ширину.</p>
+            <dc-import name="Button" label="Сохранить размеры" variant="dark" type="submit" block="{{ true }}" hint-size="100%,52px"></dc-import>
+            <div style="border-top:1px solid #EEEBE7;padding-top:14px">
+              <button type="button" onClick="{{ toggleMeasure }}" aria-expanded="{{ measureExpanded }}" style="min-height:44px;border:0;background:transparent;padding:0;font-size:15px;font-weight:600;color:#16181A;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#E24C2B;cursor:pointer;text-align:left">Не знаю размеров — заказать замер</button>
+              <sc-if value="{{ measureOpen }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:10px;background:#F2F0ED;border-radius:14px;padding:16px 18px">
+                  <p style="margin:0;font-size:14.5px;line-height:1.55;color:#2C3033">Мастер приедет в удобное время, снимет размеры проёма и покажет образцы полотен и профиля. Замер бесплатный и ни к чему не обязывает.</p>
+                  <div style="margin-top:14px;display:flex"><dc-import name="Button" label="Нужен замер" variant="outline" size="sm" on-press="{{ pickMeasure }}" hint-size="150px,46px"></dc-import></div>
+                </div>
+              </sc-if>
+            </div>
+          </form>
+        </sc-if>
+
+        <sc-if value="{{ kRequest }}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+            <form onSubmit="{{ submitRequest }}" novalidate="" style="display:flex;flex-direction:column;gap:18px">
+              <dl style="margin:0;background:#F2F0ED;border-radius:14px;padding:6px 18px">
+                <sc-for list="{{ summary }}" as="s" hint-placeholder-count="4">
+                  <div style="display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #E4E0DB;font-size:14.5px">
+                    <dt style="flex:0 0 42%;color:#5A5F63">{{ s.k }}</dt>
+                    <dd style="margin:0;flex:1;font-weight:600">{{ s.v }}</dd>
+                  </div>
+                </sc-for>
+              </dl>
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Имя
+                <input value="{{ name }}" onChange="{{ onName }}" autocomplete="name" placeholder="Как к вам обращаться" style="min-height:52px;border:1px solid #D9D5D0;border-radius:12px;padding:0 14px;font-size:16px;color:#16181A;background:#fff" />
+              </label>
+              <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:500">Телефон или WhatsApp
+                <input type="tel" value="{{ phoneVal }}" onChange="{{ onPhone }}" autocomplete="tel" inputMode="tel" placeholder="+34 600 000 000" aria-describedby="phone-err" style="min-height:52px;border:1px solid {{ phoneBorder }};border-radius:12px;padding:0 14px;font-size:16px;color:#16181A;background:#fff" />
+              </label>
+              <sc-if value="{{ hasFormErr }}" hint-placeholder-val="{{ false }}">
+                <p id="phone-err" role="alert" style="margin:-8px 0 0;font-size:14px;color:#B3321A">{{ formErr }}</p>
+              </sc-if>
+              <dc-import name="Button" label="Отправить заявку" size="lg" type="submit" block="{{ true }}" hint-size="100%,56px"></dc-import>
+              <p style="margin:0;font-size:13px;line-height:1.5;color:#5A5F63">Параметры можно поменять позже — на замере мастер уточнит всё на месте.</p>
+            </form>
+          </sc-if>
+          <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+            <div role="status" style="padding:12px 0">
+              <div style="width:56px;height:56px;border-radius:50%;background:#F2F0ED;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E24C2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></div>
+              <h3 style="margin:18px 0 0;font-family:Rubik,sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em">Заявка отправлена</h3>
+              <p style="margin:8px 0 0;font-size:15.5px;line-height:1.6;color:#41464A">Пришлём расчёт в течение 24 часов на указанный номер. Выбранные параметры уже в заявке.</p>
+              <div style="margin-top:22px;display:flex;justify-content:center"><dc-import name="Button" label="Закрыть" variant="outline" on-press="{{ closePanel }}" hint-size="140px,52px"></dc-import></div>
+            </div>
+          </sc-if>
+        </sc-if>
+
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;mobileBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  static WORKS = [
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Терраса 18 м² под ключ", place: "Аликанте, Плайя-де-Сан-Хуан", term: "4 недели", price: "от 9 800 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Панорамный балкон 6,2 м", place: "Бенидорм, Поньенте", term: "3 недели", price: "от 4 600 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Сетки на выход в сад и 3 окна", place: "Торревьеха, Ла-Мата", term: "10 дней", price: "от 980 €" },
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Патио с раздвижной кровлей", place: "Хавея, Ареналь", term: "5 недель", price: "от 14 200 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Остекление веранды в два контура", place: "Кальпе, Ла-Фосса", term: "3,5 недели", price: "от 6 300 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Плиссе на широкий проём 3,4 м", place: "Аликанте, Кабо-де-лас-Уэртас", term: "8 дней", price: "от 1 240 €" }
+  ];
+  static FAQ = [
+    ["Сколько стоит зимний сад или остекление террасы?", "Цена зависит от размеров проёма, типа профиля и стекла. После бесплатного замера вы получаете смету с фиксированной стоимостью: работы и материалы в ней уже учтены, доплат в процессе монтажа нет."],
+    ["Замер и расчёт действительно бесплатные?", "Да. Мастер приезжает на объект, снимает размеры, показывает образцы профиля и стекла и подбирает решение под проём. Расчёт вы получаете в течение одного рабочего дня и ничего за него не платите."],
+    ["Сколько времени занимает изготовление и монтаж?", "Изготовление занимает от двух до четырёх недель в зависимости от конструкции. Монтаж раздвижных окон и сеток плиссе обычно укладывается в один день, зимний сад — от двух до четырёх дней."],
+    ["Какая гарантия на конструкции и работу?", "Гарантия на профиль, стеклопакеты и фурнитуру — от производителя, на монтаж — от нашей бригады. Сроки прописываем в договоре до начала работ."],
+    ["Нужны ли согласования с сообществом собственников?", "Для остекления балконов и террас в многоквартирных домах обычно требуется согласие сообщества. Мы подскажем, какие документы нужны, и подготовим чертежи и характеристики конструкции для заявки."],
+    ["Выдержит ли остекление ветер и дождь?", "Системы рассчитаны на прибрежный климат: алюминиевый профиль с порошковым покрытием, уплотнители по контуру и отвод воды. Конструкцию подбираем под ветровую нагрузку конкретного участка."],
+    ["Можно ли поставить конструкцию в нестандартный проём?", "Да. Все конструкции изготавливаются по вашим размерам, включая скошенные, арочные и угловые проёмы. Форму и наклон кровли зимнего сада согласовываем на этапе замера."],
+    ["Как ухаживать за окнами и сетками?", "Достаточно протирать профиль и стекло мягким средством и раз в год очищать направляющие и смазывать фурнитуру. Сетки плиссе моют в собранном виде, снимать их не нужно."]
+  ];
+  lbVals() {
+    const on = !!this.state.lbOn;
+    if (!this._lbClose) this._lbClose = React.createRef();
+    return {
+      lbHas: !!this.state.lbSrc, lbSrc: this.state.lbSrc || "", lbAlt: this.state.lbAlt || "",
+      lbOp: on ? 1 : 0, lbImgOp: on && !this.state.lbSwap ? 1 : 0,
+      lbMulti: (this.state.lbList || []).length > 1,
+      lbDots: (this.state.lbList || []).map((_, i) => ({
+        w: i === this.state.lbIdx ? "18px" : "6px", bg: i === this.state.lbIdx ? "#fff" : "rgba(255,255,255,.4)",
+        label: "Фото " + (i + 1),
+        go: e => { e.stopPropagation(); this.lbGo(i - this.state.lbIdx); }
+      })),
+      lbStop: e => e.stopPropagation(),
+      lbTouchStart: e => { this._lbTx = e.touches[0].clientX; },
+      lbTouchEnd: e => {
+        const dx = e.changedTouches[0].clientX - (this._lbTx ?? 0);
+        if (Math.abs(dx) > 40) this.lbGo(dx < 0 ? 1 : -1);
+      },
+      lbPrev: e => { e.stopPropagation(); this.lbGo(-1); },
+      lbNext: e => { e.stopPropagation(); this.lbGo(1); }, lbVis: on ? "visible" : "hidden", lbHidden: on ? "false" : "true",
+      lbTf: on ? "scale(1) translateY(0)" : "scale(.92) translateY(12px)",
+      lbCloseRef: this._lbClose,
+      openPhoto: e => {
+        const b = e.currentTarget;
+        this._lbFrom = b;
+        const sib = Array.from((b.parentElement || b).querySelectorAll("[data-src]"));
+        const list = sib.map(x => ({ src: x.getAttribute("data-src"), alt: x.getAttribute("data-alt") || "" }));
+        const idx = Math.max(0, sib.indexOf(b));
+        this.setState({ lbList: list, lbIdx: idx, lbSwap: false, lbSrc: list[idx].src, lbAlt: list[idx].alt }, () => {
+          requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ lbOn: true }, () => this._lbClose.current && this._lbClose.current.focus({ preventScroll: true }))));
+        });
+        document.body.style.overflow = "hidden";
+        this._lbKey = ev => {
+          if (ev.key === "Escape") this.closeLb();
+          else if (ev.key === "ArrowRight") this.lbGo(1);
+          else if (ev.key === "ArrowLeft") this.lbGo(-1);
+        };
+        window.addEventListener("keydown", this._lbKey);
+      },
+      closePhoto: e => { e.stopPropagation(); this.closeLb(); }
+    };
+  }
+  lbGo(d) {
+    const list = this.state.lbList || [];
+    if (list.length < 2 || !this.state.lbOn || !d) return;
+    const i = (this.state.lbIdx + d + list.length) % list.length;
+    clearTimeout(this._lbT);
+    this.setState({ lbSwap: true });
+    this._lbT = setTimeout(() => this.setState({ lbIdx: i, lbSrc: list[i].src, lbAlt: list[i].alt }, () => requestAnimationFrame(() => this.setState({ lbSwap: false }))), 200);
+  }
+  closeLb() {
+    if (!this.state.lbOn) return;
+    this.setState({ lbOn: false });
+    document.body.style.overflow = "";
+    if (this._lbKey) window.removeEventListener("keydown", this._lbKey);
+    if (this._lbFrom) this._lbFrom.focus({ preventScroll: true });
+  }
+  worksVals() {
+    const cur = this.state.worksTab ?? "Все работы";
+    const tabs = ["Все работы", "Зимние сады", "Раздвижные окна", "Сетки плиссе"].map(label => ({
+      label,
+      bg: label === cur ? "#16181A" : "transparent",
+      fg: label === cur ? "#FFFFFF" : "#16181A",
+      bd: label === cur ? "#16181A" : "#CFCAC4",
+      click: () => this.setState({ worksTab: label })
+    }));
+    return { tabs, works: Component.WORKS.filter(x => cur === "Все работы" || x.cat === cur).slice(0, 3) };
+  }
+  state = {
+    w: typeof window !== "undefined" ? window.innerWidth : 1440,
+    install: true,
+    config: "Двустворчатая со встречным закрыванием",
+    fabric: "Фибергласс",
+    color: "Антрацит",
+    size: null,
+    panel: false, kind: "config",
+    sw: "", sh: "", sizeErr: "", measureOpen: false,
+    slide: 0, cardTop: 90, bar: false,
+    name: "", phone: "", formErr: "", sent: false, burger: false
+  };
+  cardRef = React.createRef();
+  headerRef = React.createRef();
+  trackRef = React.createRef();
+  carRef = React.createRef();
+  closeRef = React.createRef();
+
+  static GALLERY = [
+    { cap: "Двустворчатая · Фибергласс · Антрацит", desc: "Выход на террасу с видом на море, створки сетки сведены наполовину" },
+    { cap: "Одностворчатая · Фибергласс · Белый", desc: "Кухонное окно, сетка закрыта, на подоконнике травы в горшках" },
+    { cap: "Двустворчатая · Антипыльцевое · Серебристый анодированный", desc: "Широкий проём в гостиной, створки встречаются в центре" },
+    { cap: "Вертикальная плиссе · Солнцезащитное · Антрацит", desc: "Высокое узкое окно на лестнице, сетка опущена до середины" },
+    { cap: "Одностворчатая · Усиленное для животных · Под дерево", desc: "Дверь в сад, у закрытой сетки сидит собака" }
+  ];
+  static CONFIG = [
+    { name: "Одностворчатая", note: "Для окон и стандартных дверных проёмов", k: "single" },
+    { name: "Двустворчатая со встречным закрыванием", note: "Для широких проёмов и выходов на террасу", k: "double" },
+    { name: "Вертикальная плиссе", note: "Раскладывается сверху вниз, для высоких узких окон", k: "vertical" }
+  ];
+  static FABRICS = [
+    ["Фибергласс", "Стандарт: прочный и почти незаметный на просвет"],
+    ["Антипыльцевое", "Плотнее, задерживает и мелкую пыль"],
+    ["Солнцезащитное", "Снижает прямое солнце и нагрев"],
+    ["Усиленное для животных", "Держит когти и толчки"]
+  ];
+  static COLORS = [
+    ["Белый", "radial-gradient(circle at 32% 28%, rgba(255,255,255,.95), rgba(255,255,255,0) 48%), linear-gradient(160deg, #F7F6F2, #DAD8D2)"],
+    ["Коричневый", "radial-gradient(circle at 32% 28%, rgba(255,255,255,.28), rgba(255,255,255,0) 46%), linear-gradient(160deg, #6E5243, #3E2C23)"],
+    ["Антрацит", "radial-gradient(circle at 32% 28%, rgba(255,255,255,.25), rgba(255,255,255,0) 46%), linear-gradient(160deg, #4A5055, #26292C)"],
+    ["Серебристый анодированный", "radial-gradient(circle at 32% 28%, rgba(255,255,255,.7), rgba(255,255,255,0) 50%), repeating-linear-gradient(100deg, rgba(255,255,255,.18) 0 2px, rgba(0,0,0,.04) 2px 4px), linear-gradient(160deg, #D9DCDE, #9DA2A6)"],
+    ["Под дерево", "radial-gradient(circle at 32% 28%, rgba(255,255,255,.25), rgba(255,255,255,0) 46%), repeating-linear-gradient(78deg, #8A5A3A 0 3px, #A06C47 3px 7px, #7A4E31 7px 9px, #98663F 9px 14px)"],
+    ["Покраска в любой RAL", "conic-gradient(from 20deg, #C8483A, #E3A33B, #7A9A58, #3F6F8F, #6A4C7C, #C8483A)"]
+  ];
+  static PERK_FILES = [
+    "Плоска нижня напрямна москітної сітки-1 1.jpg",
+    "Магнітне з'єднання плісованої москітної сітки-2 1.jpg",
+    "Макродеталь щіткового ущільнювача плісированої сітки-3 1.jpg",
+    "Вертикальна ручка плісованої москітної сітки-4 1.jpg",
+    "Макрозйомка антипилкової сітки в плісованих дверях-5 1.jpg",
+    "Графітовий плісирований сонцезахисний екран-6 1.jpg",
+    "Смугастий кіт торкається армованої сітки-7 1.jpg"
+  ];
+  static PERKS = [
+    ["Плоская нижняя направляющая", true],
+    ["Магнитный замок", true],
+    ["Щётки по периметру", true],
+    ["Вертикальная ручка-планка", true],
+    ["Антипыльцевое полотно", false],
+    ["Солнцезащитное полотно", false],
+    ["Усиленное полотно для животных", false]
+  ];
+
+  componentDidMount() {
+    this._onResize = () => { this.setState({ w: window.innerWidth }); this._onScroll(); };
+    this._onScroll = () => { if (!this._raf) this._raf = requestAnimationFrame(() => { this._raf = 0; this._measure(); }); };
+    this._onKey = e => { if (e.key === "Escape" && this.state.panel) this.closePanel(); };
+    window.addEventListener("resize", this._onResize);
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    window.addEventListener("keydown", this._onKey);
+    if (window.ResizeObserver && this.cardRef.current) {
+      this._ro = new ResizeObserver(this._onScroll);
+      this._ro.observe(this.cardRef.current);
+    }
+    this._onResize();
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    window.removeEventListener("scroll", this._onScroll);
+    window.removeEventListener("keydown", this._onKey);
+    if (this._ro) this._ro.disconnect();
+    if (this._raf) cancelAnimationFrame(this._raf);
+    document.body.style.overflow = "";
+  }
+  componentDidUpdate(pp, ps) {
+    if (ps.panel !== this.state.panel) {
+      document.body.style.overflow = this.state.panel ? "hidden" : "";
+      if (this.state.panel) setTimeout(() => { const b = this.closeRef.current; if (b) b.focus({ preventScroll: true }); }, 80);
+      else if (this._lastFocus && this._lastFocus.focus) this._lastFocus.focus({ preventScroll: true });
+    }
+  }
+  _measure() {
+    const w = window.innerWidth, ih = window.innerHeight, up = {};
+    const card = this.cardRef.current, head = document.querySelector("[data-site-header]");
+    const hh0 = head ? head.offsetHeight : 66;
+    if (hh0 !== this.state.stickyTop) up.stickyTop = hh0;
+    if (card && w >= 1000) {
+      const hh = head ? head.offsetHeight : 66;
+      const top = Math.round(Math.min(hh + 20, ih - card.offsetHeight - 24));
+      if (top !== this.state.cardTop) up.cardTop = top;
+    }
+    const bar = w < 600 && window.scrollY > ih * 0.85;
+    if (bar !== this.state.bar) up.bar = bar;
+    if (Object.keys(up).length) this.setState(up);
+  }
+  open(kind) {
+    this._lastFocus = document.activeElement;
+    const up = { panel: true, kind };
+    if (kind === "size") up.sizeErr = "";
+    if (kind === "request") { up.formErr = ""; up.sent = false; }
+    this.setState(up);
+  }
+  closePanel = () => { clearTimeout(this._pt); this.setState({ panel: false }); };
+  pick(key, val) {
+    this.setState({ [key]: val });
+    clearTimeout(this._pt);
+    this._pt = setTimeout(this.closePanel, 220);
+  }
+  maxW() { return this.state.config.indexOf("Двустворчатая") === 0 ? 360 : 180; }
+  saveSize = e => {
+    e.preventDefault();
+    const W = parseInt(this.state.sw, 10), H = parseInt(this.state.sh, 10), mw = this.maxW();
+    let err = "";
+    if (!W || !H) err = "Укажите ширину и высоту в сантиметрах.";
+    else if (W > mw) err = mw === 360 ? "Ширина больше максимальной: до 360 см для двустворчатой сетки." : "Ширина больше максимальной: до 180 см на створку. Для проёма шире выберите двустворчатую.";
+    else if (H > 260) err = "Высота больше максимальной: до 260 см.";
+    if (err) { this.setState({ sizeErr: err }); return; }
+    this.setState({ size: W + " × " + H + " см", sizeErr: "" });
+    this.closePanel();
+  };
+  submitRequest = e => {
+    e.preventDefault();
+    const digits = this.state.phone.replace(/\D/g, "");
+    if (digits.length < 9) { this.setState({ formErr: "Укажите телефон, чтобы мы прислали расчёт." }); return; }
+    this.setState({ sent: true, formErr: "" });
+  };
+  onTrackScroll = () => {
+    const el = this.trackRef.current;
+    if (!el) return;
+    const n = Component.GALLERY.length, max = el.scrollWidth - el.clientWidth;
+    const i = max > 0 ? Math.round(el.scrollLeft / max * (n - 1)) : 0;
+    if (i !== this.state.slide) this.setState({ slide: i });
+  };
+  scrollCar(dir) { const el = this.carRef.current; if (el) el.scrollBy({ left: dir * 320, behavior: "smooth" }); }
+
+  opt(key, name, i, extra) {
+    const sel = this.state[key] === name;
+    return Object.assign({
+      name, sel, notSel: !sel,
+      ariaChecked: sel ? "true" : "false",
+      ring: sel ? "inset 0 0 0 2px #16181A" : "inset 0 0 0 1px #D9D5D0",
+      click: () => this.pick(key, name)
+    }, extra);
+  }
+
+  priceVals(S, w, phone) {
+    const out = {
+      showExtras: false,
+      priceTable: !phone, priceList: phone,
+      cfgW: w >= 1024 ? "38%" : "36%", priceW: w >= 1024 ? "200px" : "150px",
+      schW: w >= 1024 ? 56 : 42, schH: w >= 1024 ? 41 : 31,
+      modCols: w >= 720 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+      ctaFlex: phone ? "1 1 100%" : "0 0 auto"
+    };
+    return out;
+  }
+
+  renderVals() {
+    const S = this.state, w = S.w;
+    const twoCol = w >= 1000, phone = w < 600, sheet = !twoCol, isMobileNav = w < 1024;
+    const gallery = Component.GALLERY.map((g, i) => Object.assign({ id: "pl-gal-" + i, src: "img/plisse-gal-" + (i + 1) + ".jpg" }, g));
+    const colorRow = Component.COLORS.find(c => c[0] === S.color) || Component.COLORS[2];
+    const titles = { config: "Конфигурация", fabric: "Полотно", color: "Цвет профиля", size: "Размеры проёма", request: "Заявка на расчёт" };
+    const sizeBad = !!S.sizeErr;
+
+    return {
+      headerRef: this.headerRef, cardRef: this.cardRef, trackRef: this.trackRef, carRef: this.carRef, closeRef: this.closeRef,
+      topBarVisible: (this.props.showTopBar ?? true) && w >= 720,
+      desktopNav: !isMobileNav, mobileNav: isMobileNav,
+      burgerOpen: isMobileNav && S.burger, burgerExpanded: S.burger ? "true" : "false",
+      toggleBurger: () => this.setState(s => ({ burger: !s.burger })),
+
+      twoCol, oneCol: !twoCol, phone, sheet, footerPad: phone ? 72 : 0,
+      gridCols: twoCol ? "minmax(0,1fr) clamp(360px,31vw,452px)" : "minmax(0,1fr)",
+      descCols: w >= 900 ? "minmax(0,1.05fr) minmax(0,1fr)" : "minmax(0,1fr)",
+      cardPos: twoCol ? "sticky" : "relative",
+      cardTop: twoCol ? S.cardTop : 0,
+      stickyTop: S.stickyTop ?? 66,
+      relCols: w >= 1000 ? "minmax(0,1.1fr) minmax(0,1fr)" : "minmax(0,1fr)",
+      relRowCols: w >= 560 ? "minmax(0,0.85fr) minmax(0,1fr)" : "minmax(0,1fr)",
+
+      gallery, galleryMain: gallery[0], galleryRest: gallery.slice(1),
+      trackGap: phone ? "0px" : "12px",
+      trackPad: phone ? "0px" : "clamp(16px,3vw,32px)",
+      slideW: phone ? "100%" : "74%",
+      slideAspect: phone ? "4/5" : "4/3",
+      slideRadius: phone ? "0px" : "16px",
+      capPad: phone ? "16px" : "0px",
+      slideLabel: (S.slide + 1) + " / " + gallery.length,
+      onTrackScroll: this.onTrackScroll,
+
+      config: S.config, fabric: S.fabric, color: S.color, colorBg: colorRow[1],
+      sizeLabel: S.size || "Указать размеры",
+      openConfig: () => this.open("config"), openFabric: () => this.open("fabric"),
+      openColor: () => this.open("color"), openSize: () => this.open("size"),
+      openRequest: () => this.open("request"),
+      ...this.priceVals(S, w, phone),
+      procCols: w >= 1000 ? "repeat(4,minmax(0,1fr))" : w >= 560 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
+
+      perks: Component.PERKS.map((p, i) => ({
+        id: "pl-perk-" + i, src: "img/perks/perk-" + (i + 1) + ".jpg", name: p[0], desc: "Макро: " + p[0].toLowerCase(),
+        tag: p[1] ? "Входит" : ((this.state.perkAdd || {})[i] ? "Добавлено" : "За доплату"), tagColor: p[1] ? "#41464A" : "#B3321A",
+        ...(() => {
+          const on = !!(this.state.perkAdd || {})[i];
+          return {
+            paid: !p[1], pressed: on ? "true" : "false",
+            addLabel: on ? "Убрать: " + p[0] : "Добавить: " + p[0],
+            addBg: on ? "#16181A" : "rgba(255,255,255,.92)", addFg: on ? "#FFFFFF" : "#16181A",
+            rot: on ? "45deg" : "0deg",
+            toggle: () => this.setState(s => { const a = Object.assign({}, s.perkAdd); a[i] = !a[i]; return { perkAdd: a }; })
+          };
+        })()
+      })),
+      carPrev: () => this.scrollCar(-1), carNext: () => this.scrollCar(1),
+
+      phoneBar: phone && (this.props.mobileBar ?? true),
+      barT: S.bar && !S.panel ? "0" : "110%",
+      barTab: S.bar ? "0" : "-1",
+
+      ovHidden: S.panel ? "false" : "true",
+      ovVis: S.panel ? "visible" : "hidden",
+      ovPE: S.panel ? "auto" : "none",
+      scrimOp: S.panel ? 1 : 0,
+      pW: sheet ? "100%" : "min(500px,100vw)",
+      pH: sheet ? "auto" : "100%",
+      pMax: sheet ? "88vh" : "100vh",
+      pR: sheet ? "22px 22px 0 0" : "0",
+      pT: S.panel ? "translate3d(0,0,0)" : (sheet ? "translate3d(0,105%,0)" : "translate3d(105%,0,0)"),
+      panelTitle: titles[S.kind],
+      closePanel: this.closePanel,
+      kConfig: S.kind === "config", kFabric: S.kind === "fabric", kColor: S.kind === "color",
+      kSize: S.kind === "size", kRequest: S.kind === "request",
+
+      configOpts: Component.CONFIG.map((c, i) => this.opt("config", c.name, i, {
+        note: c.note, isSingle: c.k === "single", isDouble: c.k === "double", isVertical: c.k === "vertical"
+      })),
+      fabricOpts: Component.FABRICS.map((f, i) => this.opt("fabric", f[0], i, {
+        note: f[1], id: "pl-fabric-" + i,
+        desc: "Вид на просвет: одно и то же окно с видом на сад, полотно «" + f[0] + "»"
+      })),
+      colorOpts: Component.COLORS.map((c, i) => {
+        const o = this.opt("color", c[0], i, { bg: c[1] });
+        o.ring = o.sel ? "0 0 0 3px #fff, 0 0 0 5px #16181A" : "inset 0 0 0 1px rgba(22,24,26,.18), 0 4px 10px -4px rgba(22,24,26,.35)";
+        o.weight = o.sel ? 600 : 400;
+        return o;
+      }),
+
+      sw: S.sw, sh: S.sh,
+      onSw: e => this.setState({ sw: e.target.value.replace(/\D/g, "").slice(0, 3), sizeErr: "" }),
+      onSh: e => this.setState({ sh: e.target.value.replace(/\D/g, "").slice(0, 3), sizeErr: "" }),
+      sizeErr: S.sizeErr, hasSizeErr: sizeBad, sizeBorder: sizeBad ? "#B3321A" : "#D9D5D0",
+      saveSize: this.saveSize,
+      measureOpen: S.measureOpen, measureExpanded: S.measureOpen ? "true" : "false",
+      toggleMeasure: () => this.setState(s => ({ measureOpen: !s.measureOpen })),
+      pickMeasure: () => { this.setState({ size: "Нужен замер", sizeErr: "" }); this.closePanel(); },
+
+      summary: [
+        { k: "Конфигурация", v: S.config }, { k: "Полотно", v: S.fabric },
+        { k: "Цвет профиля", v: S.color }, { k: "Размеры проёма", v: S.size || "Не указаны" }
+      ],
+      name: S.name, phoneVal: S.phone,
+      onName: e => this.setState({ name: e.target.value }),
+      onPhone: e => this.setState({ phone: e.target.value, formErr: "" }),
+      formErr: S.formErr, hasFormErr: !!S.formErr, phoneBorder: S.formErr ? "#B3321A" : "#D9D5D0",
+      submitRequest: this.submitRequest,
+      sent: S.sent, notSent: !S.sent
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<header data-site-header="" style="position:relative;background:#fff;border-bottom:1px solid #E7E4E0;color:#16181A">
+  <div style="max-width:1360px;margin:0 auto;padding:9px clamp(16px,3vw,32px);min-height:66px;display:flex;align-items:center;gap:clamp(16px,2vw,40px)">
+    <a href="{{ logoHref }}" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(17px,2vw,21px);letter-spacing:-0.02em;white-space:nowrap">Ventanas Perfect</a>
+
+    <sc-if value="{{ desktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;align-items:center;gap:clamp(14px,1.7vw,30px);font-weight:500;font-size:15px;flex:1;min-width:0">
+        <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="display:flex;align-items:center">
+          <a href="{{ home }}#showcase" style="display:flex;align-items:center;gap:7px">Продукция
+            <span aria-hidden="true" style="flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:{{ chevBg }};color:{{ chevFg }};display:flex;align-items:center;justify-content:center;transition:background .35s ease,color .35s ease">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:block;transform:rotate({{ chevRot }});transition:transform .5s cubic-bezier(.19,1,.22,1)"><path d="M3 4.75 C4.4 6.3 5.3 7.25 6 7.25 C6.7 7.25 7.6 6.3 9 4.75" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </span>
+          </a>
+            <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #E7E4E0;box-shadow:0 24px 48px -24px rgba(0,0,0,.25);clip-path:{{ mClip }};opacity:{{ mOp }};visibility:{{ mVis }};pointer-events:{{ mPe }};transition:{{ mTr }};padding:40px max(clamp(16px,3vw,32px),calc((100vw - 1360px) / 2 + 32px));display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:32px">
+              <div style="display:flex;flex-direction:column;gap:12px;opacity:{{ mOp }};transform:{{ mColT }};transition:opacity .5s ease {{ mD0 }},transform .7s cubic-bezier(.19,1,.22,1) {{ mD0 }}">
+                <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Москитные сетки</div>
+                <a href="/setki-plisse" style="color:#41464A;font-size:14.5px">Плиссе</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Раздвижные</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Рулонные</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Фиксированные</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Распашные</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Для мансардных окон</a>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;opacity:{{ mOp }};transform:{{ mColT }};transition:opacity .5s ease {{ mD1 }},transform .7s cubic-bezier(.19,1,.22,1) {{ mD1 }}">
+                <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Раздвижные окна</div>
+                <a href="#" style="color:#41464A;font-size:14.5px">Алюминиевые системы</a>
+                <a href="#" style="color:#41464A;font-size:14.5px">Безрамное остекление</a>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;opacity:{{ mOp }};transform:{{ mColT }};transition:opacity .5s ease {{ mD2 }},transform .7s cubic-bezier(.19,1,.22,1) {{ mD2 }}">
+                <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Зимние сады</div>
+                <a href="#" style="color:#41464A;font-size:14.5px">Зимние сады и остекление террас</a>
+              </div>
+            </div>
+        </div>
+        <a href="#">Наши работы</a>
+        <a href="#">Расчёт стоимости</a>
+        <a href="#">Для подрядчиков</a>
+        <a href="#">Контакты</a>
+      </nav>
+      <dc-import name="Button" label="Заказать замер" href="#" size="sm" style="flex:0 0 auto" hint-size="160px,46px"></dc-import>
+    </sc-if>
+
+    <sc-if value="{{ mobileNav }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1"></div>
+      <a href="tel:+34000000000" style="font-weight:600;font-size:14px;white-space:nowrap">Позвонить</a>
+      <button type="button" onClick="{{ toggleBurger }}" aria-label="Меню" aria-expanded="{{ burgerExpanded }}" style="width:46px;height:46px;border:1px solid #E7E4E0;border-radius:12px;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;flex:0 0 auto">
+        <span style="width:20px;height:2px;background:#16181A"></span>
+        <span style="width:20px;height:2px;background:#16181A"></span>
+        <span style="width:20px;height:2px;background:#16181A"></span>
+      </button>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ burgerOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #E7E4E0;background:#fff;padding:24px clamp(16px,3vw,32px) 32px;display:flex;flex-direction:column;gap:4px;max-height:70vh;overflow-y:auto">
+      <a href="{{ home }}#showcase" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Продукция</a>
+      <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Наши работы</a>
+      <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Расчёт стоимости</a>
+      <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Для подрядчиков</a>
+      <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Контакты</a>
+      <div style="margin-top:20px"><dc-import name="Button" label="Узнать стоимость" href="#" size="lg" block="{{ true }}" hint-size="100%,56px"></dc-import></div>
+      <div style="display:flex;gap:16px;margin-top:20px;font-size:14px;color:#4A4F53">
+        <a href="#" style="color:#4A4F53">ES</a>
+        <a href="#" style="color:#4A4F53">EN</a>
+        <a href="#" style="color:#E24C2B;font-weight:600">RU</a>
+      </div>
+    </div>
+  </sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;90px&quot;},&quot;home&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { menuOpen: false, burger: false, w: typeof window !== "undefined" ? window.innerWidth : 1440 };
+  componentDidMount() {
+    this._onResize = () => {
+      const w = window.innerWidth;
+      if (w !== this.state.w) this.setState({ w, burger: w < 1024 ? this.state.burger : false });
+    };
+    window.addEventListener("resize", this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); clearTimeout(this._closeT); }
+  menuVals(o) {
+    const ease = "cubic-bezier(.19,1,.22,1)";
+    const v = {
+      mClip: o ? "inset(0 0 -80px 0)" : "inset(0 0 100% 0)",
+      mOp: o ? 1 : 0, mVis: o ? "visible" : "hidden", mPe: o ? "auto" : "none",
+      mTr: o ? "clip-path .65s " + ease + ", opacity .3s ease, visibility 0s" : "clip-path .45s " + ease + ", opacity .35s ease .1s, visibility 0s .45s",
+      mColT: o ? "translateY(0)" : "translateY(-10px)"
+    };
+    for (let n = 0; n < 4; n++) v["mD" + n] = o ? (80 + n * 45) + "ms" : "0ms";
+    return v;
+  }
+  renderVals() {
+    const isMobile = this.state.w < 1024;
+    const home = this.props.home ?? "";
+    return {
+      home,
+      logoHref: home || "#",
+      desktopNav: !isMobile,
+      mobileNav: isMobile,
+      burgerOpen: isMobile && this.state.burger,
+      burgerExpanded: this.state.burger ? "true" : "false",
+      toggleBurger: () => this.setState(s => ({ burger: !s.burger })),
+      menuOpen: !isMobile && this.state.menuOpen,
+      ...this.menuVals(!isMobile && this.state.menuOpen),
+      chevRot: !isMobile && this.state.menuOpen ? "180deg" : "0deg",
+      chevBg: !isMobile && this.state.menuOpen ? "#E24C2B" : "#F2F0ED",
+      chevFg: !isMobile && this.state.menuOpen ? "#FFFFFF" : "#16181A",
+      openMenu: () => { clearTimeout(this._closeT); if (!this.state.menuOpen) this.setState({ menuOpen: true }); },
+      closeMenu: () => { clearTimeout(this._closeT); this._closeT = setTimeout(() => this.setState({ menuOpen: false }), 220); }
+    };
+  }
+}
+</script>
+</body>
+</html>

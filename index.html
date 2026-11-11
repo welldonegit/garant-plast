@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ventanas Perfect — зимние сады, раздвижные окна, сетки плиссе</title>
-<meta name="description" content="Зимние сады, раздвижные окна и сетки плиссе под размер. Бесплатный замер.">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -30,7 +29,7 @@
 
   <sc-if value="{{ topBarVisible }}" hint-placeholder-val="{{ true }}">
   <div style="background:#16181A;color:#B9BEC2;font-size:13px">
-    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);min-height:44px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);min-height:40px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
       <a href="tel:+34000000000" style="color:#fff;font-weight:600">+34 000 000 000</a>
       <a href="#" style="color:#B9BEC2">WhatsApp</a>
       <span>Пн–Пт 9:00–18:00</span>
@@ -44,80 +43,7 @@
   </div>
   </sc-if>
 
-  <header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #E7E4E0">
-    <div style="max-width:1360px;margin:0 auto;padding:14px clamp(16px,3vw,32px);min-height:76px;display:flex;align-items:center;gap:clamp(16px,2vw,40px)">
-      <a href="#" style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(17px,2vw,21px);letter-spacing:-0.02em;white-space:nowrap">Ventanas Perfect</a>
-
-      <sc-if value="{{ desktopNav }}" hint-placeholder-val="{{ true }}">
-        <nav style="display:flex;align-items:center;gap:clamp(14px,1.7vw,30px);font-weight:500;font-size:15px;flex:1;min-width:0">
-          <div onMouseEnter="{{ openMenu }}" onMouseLeave="{{ closeMenu }}" style="display:flex;align-items:center">
-            <a href="#products" style="display:flex;align-items:center;gap:7px">Продукция
-              <span style="width:6px;height:6px;border-right:1.5px solid #16181A;border-bottom:1.5px solid #16181A;transform:rotate(45deg);margin-top:-3px"></span>
-            </a>
-            <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-              <div style="position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid #E7E4E0;box-shadow:0 24px 48px -24px rgba(0,0,0,.25);padding:40px max(clamp(16px,3vw,32px),calc((100vw - 1360px) / 2 + 32px));display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:32px">
-                <div style="display:flex;flex-direction:column;gap:12px">
-                  <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Зимние сады</div>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Остекление террас</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Остекление балконов</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Веранды и патио</a>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:12px">
-                  <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Окна и двери ПВХ</div>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Окна для дома</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Окна для квартиры</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Балконные двери</a>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:12px">
-                  <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Раздвижные окна</div>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Для балконов</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Для террас</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">Выходы в сад</a>
-                </div>
-                <div style="display:flex;flex-direction:column;gap:12px">
-                  <div style="font-family:Rubik,sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#E24C2B">Сетки плиссе</div>
-                  <a href="#" style="color:#41464A;font-size:14.5px">На окна</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">На двери</a>
-                  <a href="#" style="color:#41464A;font-size:14.5px">На широкие проёмы</a>
-                </div>
-              </div>
-            </sc-if>
-          </div>
-          <a href="#">Наши работы</a>
-          <a href="#">Расчёт стоимости</a>
-          <a href="#">Для подрядчиков</a>
-          <a href="#">Контакты</a>
-        </nav>
-        <a href="#" style="background:#E24C2B;color:#fff;font-weight:600;font-size:15px;padding:15px clamp(16px,2vw,26px);border-radius:999px;white-space:nowrap;flex:0 0 auto" style-hover="background:#C63D1F;color:#fff">Заказать замер</a>
-      </sc-if>
-
-      <sc-if value="{{ mobileNav }}" hint-placeholder-val="{{ false }}">
-        <div style="flex:1"></div>
-        <a href="tel:+34000000000" style="font-weight:600;font-size:14px;white-space:nowrap">Позвонить</a>
-        <button onClick="{{ toggleBurger }}" aria-label="Меню" style="width:46px;height:46px;border:1px solid #E7E4E0;border-radius:12px;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;flex:0 0 auto">
-          <span style="width:20px;height:2px;background:#16181A"></span>
-          <span style="width:20px;height:2px;background:#16181A"></span>
-          <span style="width:20px;height:2px;background:#16181A"></span>
-        </button>
-      </sc-if>
-    </div>
-
-    <sc-if value="{{ burgerOpen }}" hint-placeholder-val="{{ false }}">
-      <div style="border-top:1px solid #E7E4E0;background:#fff;padding:24px clamp(16px,3vw,32px) 32px;display:flex;flex-direction:column;gap:4px;max-height:70vh;overflow-y:auto">
-        <a href="#products" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Продукция</a>
-        <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Наши работы</a>
-        <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Расчёт стоимости</a>
-        <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Для подрядчиков</a>
-        <a href="#" style="font-size:19px;font-weight:600;padding:14px 0;border-bottom:1px solid #F2F0ED">Контакты</a>
-        <a href="#" style="margin-top:20px;background:#E24C2B;color:#fff;font-weight:600;font-size:16px;padding:18px 24px;border-radius:999px;text-align:center" style-hover="background:#C63D1F;color:#fff">Узнать стоимость</a>
-        <div style="display:flex;gap:16px;margin-top:20px;font-size:14px;color:#4A4F53">
-          <a href="#" style="color:#4A4F53">ES</a>
-          <a href="#" style="color:#4A4F53">EN</a>
-          <a href="#" style="color:#E24C2B;font-weight:600">RU</a>
-        </div>
-      </div>
-    </sc-if>
-  </header>
+  <dc-import name="SiteHeader" style="position:sticky;top:0;z-index:50" hint-size="100%,66px"></dc-import>
 
   <sc-if value="{{ heroFull }}" hint-placeholder-val="{{ true }}">
   <section style="position:relative;background:#16181A;min-height:clamp(480px,78vh,760px);display:flex;align-items:flex-end;overflow:hidden">
@@ -127,7 +53,7 @@
       <h1 style="font-family:Rubik,sans-serif;font-weight:700;color:#fff;font-size:clamp(30px,5.2vw,64px);line-height:1.08;letter-spacing:-0.025em;margin:0;max-width:24ch;text-wrap:balance">Открывайте террасу солнцу. Закрывайте от непогоды.</h1>
       <p style="color:#C9CDD1;font-size:clamp(15px,1.6vw,19px);line-height:1.55;max-width:58ch;margin:24px 0 36px">Защитите любимое место отдыха от ветра, дождя и насекомых. Зимние сады, раздвижные окна и сетки плиссе на заказ — с замером и монтажом.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="#" style="background:#E24C2B;color:#fff;font-weight:600;font-size:clamp(15px,1.5vw,16px);padding:18px clamp(22px,3vw,34px);border-radius:999px" style-hover="background:#C63D1F;color:#fff">Узнать стоимость</a>
+        <dc-import name="Button" label="Узнать стоимость" href="#" size="lg" variant="primary-light" style="height:58px" hint-size="210px,58px"></dc-import>
         <span style="position:relative;display:inline-block;width:260px;max-width:100%;height:58px;flex:0 0 auto">
           <svg viewBox="0 0 260 58" width="100%" height="100%" style="position:absolute;inset:0;overflow:visible">
             <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5"></rect>
@@ -148,7 +74,7 @@
             <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="#fff" stroke-width="2.02" stroke-opacity="0.864" stroke-linecap="round" stroke-dasharray="34 546" style="animation:traceBorder 3s linear infinite;animation-delay:-0.048s"></rect>
             <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="#fff" stroke-width="2.20" stroke-opacity="1" stroke-linecap="round" stroke-dasharray="34 546" style="animation:traceBorder 3s linear infinite"></rect>
           </svg>
-          <a href="#" style="position:absolute;inset:0;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:500;font-size:16px" style-hover="background:rgba(255,255,255,.1);color:#fff">Написать в WhatsApp</a>
+          <dc-import name="Button" label="Написать в WhatsApp" href="#" variant="ghost-light" stretch="{{ true }}" style="position:absolute;inset:0" hint-size="260px,58px"></dc-import>
         </span>
       </div>
     </div>
@@ -162,7 +88,7 @@
         <h1 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(30px,4.2vw,54px);line-height:1.1;letter-spacing:-0.025em;margin:0;text-wrap:balance">Открывайте террасу солнцу. Закрывайте от непогоды.</h1>
         <p style="color:#4A4F53;font-size:clamp(15px,1.6vw,18px);line-height:1.55;max-width:46ch;margin:24px 0 34px">Защитите любимое место отдыха от ветра, дождя и насекомых. Зимние сады, раздвижные окна и сетки плиссе на заказ — с замером и монтажом.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="#" style="background:#E24C2B;color:#fff;font-weight:600;font-size:16px;padding:18px clamp(22px,3vw,34px);border-radius:999px" style-hover="background:#C63D1F;color:#fff">Узнать стоимость</a>
+          <dc-import name="Button" label="Узнать стоимость" href="#" size="lg" style="height:58px" hint-size="210px,58px"></dc-import>
           <span style="position:relative;display:inline-block;width:260px;max-width:100%;height:58px;flex:0 0 auto">
             <svg viewBox="0 0 260 58" width="100%" height="100%" style="position:absolute;inset:0;overflow:visible">
               <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="#C3BFB9" stroke-width="1.5"></rect>
@@ -183,7 +109,7 @@
               <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="#E24C2B" stroke-width="2.02" stroke-opacity="0.864" stroke-linecap="round" stroke-dasharray="34 546" style="animation:traceBorder 3s linear infinite;animation-delay:-0.048s"></rect>
               <rect x="1" y="1" width="258" height="56" rx="28" fill="none" stroke="#E24C2B" stroke-width="2.20" stroke-opacity="1" stroke-linecap="round" stroke-dasharray="34 546" style="animation:traceBorder 3s linear infinite"></rect>
             </svg>
-            <a href="#" style="position:absolute;inset:0;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#16181A;font-weight:500;font-size:16px" style-hover="background:rgba(22,24,26,.05);color:#16181A">Написать в WhatsApp</a>
+            <dc-import name="Button" label="Написать в WhatsApp" href="#" variant="ghost" stretch="{{ true }}" style="position:absolute;inset:0" hint-size="260px,58px"></dc-import>
           </span>
         </div>
       </div>
@@ -192,55 +118,7 @@
   </section>
   </sc-if>
 
-  <section id="products" style="background:#F2F0ED;padding:clamp(56px,8vw,100px) 0">
-    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(12px,1.6vw,20px)">
-        <article style="background:#fff;border-radius:10px;padding:0 0 36px;display:flex;flex-direction:column;overflow:hidden">
-          <div style="height:clamp(200px,22vw,260px);margin-bottom:28px;border-radius:10px;background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center"></div>
-          <div style="padding:0 clamp(20px,2.6vw,36px);display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,2.2vw,24px);letter-spacing:-0.02em;margin:0 0 14px">Зимние сады</h3>
-            <p style="color:#4A4F53;font-size:16px;line-height:1.6;margin:0 0 22px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">Терраса становится ещё одной комнатой дома: защищена от ветра, дождя и пыли и при этом полна света.</p>
-            <ul style="list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:11px;font-size:15px;color:#16181A">
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>По размерам вашей террасы или патио</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Защита от ветра, дождя и пыли</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Дополнительная комната в доме</li>
-            </ul>
-            <a href="#" style="margin-top:auto;font-weight:600;font-size:15px;color:#fff;background:#E24C2B;border-radius:999px;padding:13px 16px 13px 24px;align-self:flex-start;display:inline-flex;align-items:center;gap:14px;transition:background .18s" style-hover="background:#C63D1F;color:#fff">Смотреть зимние сады<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
-          </div>
-        </article>
-
-        <article style="background:#fff;border-radius:10px;padding:0 0 36px;display:flex;flex-direction:column;overflow:hidden">
-          <div style="height:clamp(200px,22vw,260px);margin-bottom:28px;border-radius:10px;background-image:url('img/pleated-screen.jpg');background-size:cover;background-position:center"></div>
-          <div style="padding:0 clamp(20px,2.6vw,36px);display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,2.2vw,24px);letter-spacing:-0.02em;margin:0 0 14px">Сетки плиссе</h3>
-            <p style="color:#4A4F53;font-size:16px;line-height:1.6;margin:0 0 22px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">Складываются гармошкой и почти незаметны, когда не нужны. Подходят для окон, дверей и широких выходов на террасу.</p>
-            <ul style="list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:11px;font-size:15px;color:#16181A">
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Низкий нижний профиль: не мешает проходу</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Для окон, дверей и больших проёмов</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Складываются в компактный профиль</li>
-            </ul>
-            <a href="#" style="margin-top:auto;font-weight:600;font-size:15px;color:#fff;background:#E24C2B;border-radius:999px;padding:13px 16px 13px 24px;align-self:flex-start;display:inline-flex;align-items:center;gap:14px;transition:background .18s" style-hover="background:#C63D1F;color:#fff">Смотреть сетки плиссе<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
-          </div>
-        </article>
-
-        <article style="background:#fff;border-radius:10px;padding:0 0 36px;display:flex;flex-direction:column;overflow:hidden">
-          <div style="height:clamp(200px,22vw,260px);margin-bottom:28px;border-radius:10px;background-image:url('img/sliding-windows.jpg');background-size:cover;background-position:center"></div>
-          <div style="padding:0 clamp(20px,2.6vw,36px);display:flex;flex-direction:column;flex:1">
-            <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(20px,2.2vw,24px);letter-spacing:-0.02em;margin:0 0 14px">Раздвижные окна</h3>
-            <p style="color:#4A4F53;font-size:16px;line-height:1.6;margin:0 0 22px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">Створки сдвигаются в сторону, а не распахиваются внутрь, поэтому не занимают место. Хороший выбор для балконов, террас и панорамных видов.</p>
-            <ul style="list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:11px;font-size:15px;color:#16181A">
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Экономят место у окна</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Широкий обзор без открытых створок</li>
-              <li style="display:flex;gap:12px"><span style="flex:0 0 auto;width:9px;height:9px;border:1.25px solid #E24C2B;margin-top:7px;display:flex;justify-content:center"><span style="width:1.25px;background:#E24C2B"></span></span>Для балконов, террас и выходов в сад</li>
-            </ul>
-            <a href="#" style="margin-top:auto;font-weight:600;font-size:15px;color:#fff;background:#E24C2B;border-radius:999px;padding:13px 16px 13px 24px;align-self:flex-start;display:inline-flex;align-items:center;gap:14px;transition:background .18s" style-hover="background:#C63D1F;color:#fff">Смотреть раздвижные окна<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="showcase" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,100px)">
+  <section id="showcase" style="background:#F2F0ED;padding:clamp(56px,8vw,100px) 0">
     <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
       <div style="background:#E4E7E9;border-radius:clamp(18px,2.4vw,30px);padding:clamp(12px,1.4vw,18px);display:flex;gap:clamp(12px,1.4vw,18px);flex-wrap:wrap;align-items:stretch">
         <sc-if value="{{ wideShowcase }}" hint-placeholder-val="{{ true }}">
@@ -249,6 +127,20 @@
           </div>
         </sc-if>
 
+        <sc-if value="{{ mobileShowcase }}">
+          <a href="#" style="flex:1 1 220px;background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px)" style-hover="color:#16181A">
+            <span style="display:block;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center"></span>
+            <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15;padding:0 clamp(4px,0.6vw,8px)">Зимние сады</span>
+            <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:flex-end;justify-content:space-between;gap:14px">
+              <span style="font-size:14.5px;color:#4A4F53;max-width:22ch">Остекление террас, веранд и патио</span>
+              <span style="flex:0 0 auto;width:48px;height:48px;border-radius:999px;background:#E24C2B;display:flex;align-items:center;justify-content:center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+              </span>
+            </span>
+          </a>
+        </sc-if>
+
+        <sc-if value="{{ wideCard }}" hint-placeholder-val="{{ true }}">
         <a href="#" style="flex:1.7 1 300px;position:relative;min-height:clamp(320px,36vw,480px);border-radius:clamp(14px,1.6vw,20px);overflow:hidden;background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(18px,2vw,26px);color:#fff" style-hover="color:#fff">
           <span style="align-self:flex-start;border:1px solid rgba(255,255,255,.7);border-radius:999px;padding:9px 16px;font-size:13.5px;background:rgba(12,14,16,.35)">Под размер террасы</span>
           <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,11,12,.82) 0%,rgba(10,11,12,.18) 52%,rgba(10,11,12,0) 100%)"></span>
@@ -262,9 +154,10 @@
             </span>
           </span>
         </a>
+        </sc-if>
 
         <a href="#" style="flex:1 1 220px;background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px)" style-hover="color:#16181A">
-          <span style="display:block;height:clamp(150px,17vw,240px);border-radius:clamp(10px,1.2vw,14px);background-image:url('img/sliding-windows.jpg');background-size:cover;background-position:center"></span>
+          <span style="display:block;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);background-image:url('img/sliding-windows.jpg');background-size:cover;background-position:center"></span>
           <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15;padding:0 clamp(4px,0.6vw,8px)">Раздвижные окна</span>
           <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:flex-end;justify-content:space-between;gap:14px">
             <span style="font-size:14.5px;color:#4A4F53;max-width:22ch">Для балконов, террас и выходов в сад</span>
@@ -274,8 +167,8 @@
           </span>
         </a>
 
-        <a href="#" style="flex:1 1 220px;background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px)" style-hover="color:#16181A">
-          <span style="display:block;height:clamp(150px,17vw,240px);border-radius:clamp(10px,1.2vw,14px);background-image:url('img/pleated-screen.jpg');background-size:cover;background-position:center"></span>
+        <a href="/setki-plisse" style="flex:1 1 220px;background:#fff;border-radius:clamp(14px,1.6vw,20px);padding:clamp(12px,1.2vw,16px) clamp(12px,1.2vw,16px) clamp(18px,2vw,26px);display:flex;flex-direction:column;gap:clamp(14px,1.6vw,20px)" style-hover="color:#16181A">
+          <span style="display:block;width:100%;aspect-ratio:4/3;border-radius:clamp(10px,1.2vw,14px);background-image:url('img/pleated-screen.jpg');background-size:cover;background-position:center"></span>
           <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2.1vw,26px);letter-spacing:-0.02em;line-height:1.15;padding:0 clamp(4px,0.6vw,8px)">Сетки плиссе</span>
           <span style="margin-top:auto;padding:0 clamp(4px,0.6vw,8px);display:flex;align-items:flex-end;justify-content:space-between;gap:14px">
             <span style="font-size:14.5px;color:#4A4F53;max-width:22ch">На окна, двери и широкие проёмы</span>
@@ -288,32 +181,118 @@
     </div>
   </section>
 
-  <section id="reviews" style="background:#FEF6EE;padding:clamp(56px,8vw,100px) 0">
+  <section id="steps" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,100px)">
     <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
-      <h2 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,38px);line-height:1.15;letter-spacing:-0.025em;margin:0 0 clamp(32px,4.5vw,52px);text-align:center;text-wrap:balance">Что говорят клиенты</h2>
+      <h2 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,38px);line-height:1.15;letter-spacing:-0.025em;margin:0 0 clamp(28px,4vw,56px);text-wrap:balance">Этапы работ</h2>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.8vw,24px);align-items:start">
-        <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
-          <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
-          <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Терраса стала комнатой</h3>
-          <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Остеклили террасу в конце марта, теперь сидим там и в дождь, и в ветер. Замерщик приехал через два дня, монтаж занял один день, мусор увезли.</p>
-          <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Марина К.<br />Зимний сад, Аликанте</div>
-        </article>
+      <div ref="{{ stepsRef }}">
 
-        <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
-          <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
-          <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Сетки почти не видно</h3>
-          <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Поставили плиссе на выход в сад и на три окна. Складываются в тонкий профиль, порог не мешает — коляска проезжает. Комаров в доме больше нет.</p>
-          <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Андрей и Ольга<br />Сетки плиссе, Торревьеха</div>
-        </article>
+        <div style="display:grid;grid-template-columns:{{ stepCols }};column-gap:clamp(14px,2.4vw,40px);padding-bottom:clamp(40px,6vw,88px)">
+          <div style="grid-area:{{ imgArea }};aspect-ratio:1/1;border-radius:clamp(14px,1.6vw,20px);background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center"></div>
+          <div style="grid-area:{{ tlArea }};align-self:stretch;position:relative;display:flex;justify-content:center">
+            <div data-step-track="" style="position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#D7D3CE">
+              <div data-step-fill="" style="position:absolute;top:0;left:0;width:100%;height:0;background:#E24C2B"></div>
+            </div>
+            <div data-step-dot="" style="position:relative;flex:0 0 auto;width:clamp(30px,3.2vw,40px);height:clamp(30px,3.2vw,40px);border-radius:999px;background:#D7D3CE;color:#83888C;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(13px,1.4vw,16px);transition:background .35s ease,color .35s ease">1</div>
+          </div>
+          <div style="grid-area:{{ txtArea }};padding-top:clamp(10px,1.4vw,18px)">
+            <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-0.02em;line-height:1.15;margin:0">Бесплатный замер</h3>
+            <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:14px 0 0;max-width:46ch">Мастер приезжает на объект в удобное время, снимает размеры проёма, показывает образцы профиля и стекла и подбирает конструкцию под задачу.</p>
+            <ul style="list-style:none;margin:clamp(18px,2.2vw,26px) 0 0;padding:0;display:flex;flex-direction:column;gap:12px">
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Выезд по побережью бесплатно</li>
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Образцы профиля и стекла с собой</li>
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Замер занимает около часа</li>
+            </ul>
+            <div style="margin-top:clamp(22px,2.6vw,32px);max-width:420px"><dc-import name="Button" label="Записаться на замер" href="#" variant="outline" size="lg" block="{{ true }}" hint-size="100%,56px"></dc-import></div>
+          </div>
+        </div>
 
-        <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
-          <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
-          <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Балкон наконец открытый</h3>
-          <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Раздвижные створки сдвигаются полностью, вид не перекрыт рамами. Сделали ровно в срок и по смете, без доплат в процессе.</p>
-          <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Сергей Д.<br />Раздвижные окна, Бенидорм</div>
-        </article>
+        <div style="display:grid;grid-template-columns:{{ stepCols }};column-gap:clamp(14px,2.4vw,40px);padding-bottom:clamp(40px,6vw,88px)">
+          <div style="grid-area:{{ imgArea }};aspect-ratio:1/1;border-radius:clamp(14px,1.6vw,20px);background-image:url('img/sliding-windows.jpg');background-size:cover;background-position:center"></div>
+          <div style="grid-area:{{ tlArea }};align-self:stretch;position:relative;display:flex;justify-content:center">
+            <div data-step-track="" style="position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#D7D3CE">
+              <div data-step-fill="" style="position:absolute;top:0;left:0;width:100%;height:0;background:#E24C2B"></div>
+            </div>
+            <div data-step-dot="" style="position:relative;flex:0 0 auto;width:clamp(30px,3.2vw,40px);height:clamp(30px,3.2vw,40px);border-radius:999px;background:#D7D3CE;color:#83888C;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(13px,1.4vw,16px);transition:background .35s ease,color .35s ease">2</div>
+          </div>
+          <div style="grid-area:{{ txtArea }};padding-top:clamp(10px,1.4vw,18px)">
+            <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-0.02em;line-height:1.15;margin:0">Смета и договор</h3>
+            <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:14px 0 0;max-width:46ch">В течение рабочего дня присылаем расчёт с чертежом и фиксированной стоимостью. После согласования подписываем договор со сроками и гарантией.</p>
+            <ul style="list-style:none;margin:clamp(18px,2.2vw,26px) 0 0;padding:0;display:flex;flex-direction:column;gap:12px">
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Цена фиксируется в договоре</li>
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Чертёж конструкции до оплаты</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:{{ stepCols }};column-gap:clamp(14px,2.4vw,40px);padding-bottom:clamp(40px,6vw,88px)">
+          <div style="grid-area:{{ imgArea }};aspect-ratio:1/1;border-radius:clamp(14px,1.6vw,20px);background-image:url('img/pleated-screen.jpg');background-size:cover;background-position:center"></div>
+          <div style="grid-area:{{ tlArea }};align-self:stretch;position:relative;display:flex;justify-content:center">
+            <div data-step-track="" style="position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:#D7D3CE">
+              <div data-step-fill="" style="position:absolute;top:0;left:0;width:100%;height:0;background:#E24C2B"></div>
+            </div>
+            <div data-step-dot="" style="position:relative;flex:0 0 auto;width:clamp(30px,3.2vw,40px);height:clamp(30px,3.2vw,40px);border-radius:999px;background:#D7D3CE;color:#83888C;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(13px,1.4vw,16px);transition:background .35s ease,color .35s ease">3</div>
+          </div>
+          <div style="grid-area:{{ txtArea }};padding-top:clamp(10px,1.4vw,18px)">
+            <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-0.02em;line-height:1.15;margin:0">Изготовление</h3>
+            <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:14px 0 0;max-width:46ch">Конструкцию делают по вашим размерам: алюминиевый профиль с порошковым покрытием, стеклопакеты и фурнитура под ветровую нагрузку участка.</p>
+            <ul style="list-style:none;margin:clamp(18px,2.2vw,26px) 0 0;padding:0;display:flex;flex-direction:column;gap:12px">
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>От двух до четырёх недель</li>
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Нестандартные проёмы: арки, скосы, углы</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:{{ stepCols }};column-gap:clamp(14px,2.4vw,40px)">
+          <div style="grid-area:{{ imgArea }};aspect-ratio:1/1;border-radius:clamp(14px,1.6vw,20px);background-image:url('img/winter-garden.jpg');background-size:cover;background-position:center"></div>
+          <div style="grid-area:{{ tlArea }};align-self:stretch;position:relative;display:flex;justify-content:center">
+            <div data-step-track="" style="position:absolute;top:0;bottom:0;left:50%;width:2px;margin-left:-1px;background:linear-gradient(#D7D3CE 55%,rgba(215,211,206,0) 100%)">
+              <div data-step-fill="" style="position:absolute;top:0;left:0;width:100%;height:0;background:linear-gradient(#E24C2B 55%,rgba(226,76,43,0) 100%)"></div>
+            </div>
+            <div data-step-dot="" style="position:relative;flex:0 0 auto;width:clamp(30px,3.2vw,40px);height:clamp(30px,3.2vw,40px);border-radius:999px;background:#D7D3CE;color:#83888C;display:flex;align-items:center;justify-content:center;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(13px,1.4vw,16px);transition:background .35s ease,color .35s ease">4</div>
+          </div>
+          <div style="grid-area:{{ txtArea }};padding-top:clamp(10px,1.4vw,18px)">
+            <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.4vw,30px);letter-spacing:-0.02em;line-height:1.15;margin:0">Монтаж и сдача</h3>
+            <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:14px 0 0;max-width:46ch">Бригада устанавливает конструкцию, настраивает фурнитуру и убирает за собой. Вы принимаете работу и получаете гарантию на профиль и монтаж.</p>
+            <ul style="list-style:none;margin:clamp(18px,2.2vw,26px) 0 0;padding:0;display:flex;flex-direction:column;gap:12px">
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Раздвижные окна и сетки — за один день</li>
+              <li style="display:flex;gap:12px;align-items:flex-start;color:#26292C;font-size:15.5px;line-height:1.5"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#26292C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:2px"><path d="M4 12.5l5 5L20 6.5"></path></svg>Мусор после монтажа вывозим</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+    </div>
+  </section>
+
+  <dc-import name="WorksBlock" hint-size="100%,820px"></dc-import>
+
+  <dc-import name="ReviewsBlock" hint-size="100%,640px"></dc-import>
+
+  <dc-import name="FaqBlock" hint-size="100%,760px"></dc-import>
+
+  <section id="terms" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,100px)">
+    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(12px,1.6vw,20px)">
+      <article style="background:#fff;border-radius:10px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:clamp(18px,2.2vw,28px)">
+        <span style="display:flex;align-items:center;justify-content:center;width:clamp(48px,5vw,58px);height:clamp(48px,5vw,58px);border-radius:16px;background:#FBEAE4;flex:0 0 auto"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="#E24C2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h14v13H3z"></path><path d="M17 13h6l6 5v4h-12z"></path><circle cx="9" cy="24" r="2.6"></circle><circle cx="23" cy="24" r="2.6"></circle><path d="M11.6 24h8.8"></path></svg></span>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,26px);letter-spacing:-0.02em;margin:0">Доставка</h3>
+        <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:0">Самовивіз з нашого складу, доставка за адресою або у відділення”Нова Пошта” і “Meest”</p>
+        <a href="#" style="margin-top:auto;color:#E24C2B;font-weight:600;font-size:15.5px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start" style-hover="color:#C63D1F">Про умови доставки<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E24C2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+      </article>
+
+      <article style="background:#fff;border-radius:10px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:clamp(18px,2.2vw,28px)">
+        <span style="display:flex;align-items:center;justify-content:center;width:clamp(48px,5vw,58px);height:clamp(48px,5vw,58px);border-radius:16px;background:#FBEAE4;flex:0 0 auto"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="#E24C2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="26" height="18" rx="3"></rect><path d="M3 13.5h26"></path><path d="M8 20h5"></path><circle cx="24" cy="20" r="2"></circle></svg></span>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,26px);letter-spacing:-0.02em;margin:0">Оплата</h3>
+        <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:0">Приймаємо оплату на розрахунковий рахунок.</p>
+        <a href="#" style="margin-top:auto;color:#E24C2B;font-weight:600;font-size:15.5px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start" style-hover="color:#C63D1F">Про умови оплати<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E24C2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+      </article>
+
+      <article style="background:#fff;border-radius:10px;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:clamp(18px,2.2vw,28px)">
+        <span style="display:flex;align-items:center;justify-content:center;width:clamp(48px,5vw,58px);height:clamp(48px,5vw,58px);border-radius:16px;background:#FBEAE4;flex:0 0 auto"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="#E24C2B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M27.5 16A11.5 11.5 0 1 1 23.9 7.6"></path><path d="M27.5 4.5v6h-6"></path><path d="M11 16h9"></path><path d="M16.5 12l4 4-4 4"></path></svg></span>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.2vw,26px);letter-spacing:-0.02em;margin:0">Обмін і Повернення</h3>
+        <p style="color:#41464A;font-size:clamp(15px,1.6vw,16.5px);line-height:1.6;margin:0">Можливість повернення товару протягом 14 днів</p>
+        <a href="#" style="margin-top:auto;color:#E24C2B;font-weight:600;font-size:15.5px;display:inline-flex;align-items:center;gap:10px;align-self:flex-start" style-hover="color:#C63D1F">Про обмін і повернення<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E24C2B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+      </article>
     </div>
   </section>
 
@@ -323,7 +302,7 @@
         <h2 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(19px,2vw,23px);letter-spacing:-0.02em;margin:0 0 clamp(24px,3vw,36px)">Пришлём каталог и цены:</h2>
         <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid #16181A;padding-bottom:10px;max-width:460px">
           <input type="email" placeholder="Ваш e-mail" style="flex:1 1 160px;min-width:0;border:0;background:transparent;font-family:inherit;font-size:16px;color:#16181A;padding:10px 0;outline:none" />
-          <a href="#" style="background:#E24C2B;color:#fff;font-weight:600;font-size:15px;border-radius:999px;padding:13px 16px 13px 24px;display:inline-flex;align-items:center;gap:12px;flex:0 0 auto" style-hover="background:#C63D1F;color:#fff">Отправить<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+          <dc-import name="Button" label="Отправить" href="#" size="sm" icon="arrow" style="flex:0 0 auto" hint-size="150px,46px"></dc-import>
         </div>
         <label style="display:flex;align-items:center;gap:10px;margin-top:22px;font-size:14.5px;color:#4A4F53">
           <input type="checkbox" style="width:18px;height:18px;accent-color:#E24C2B;flex:0 0 auto" />
@@ -365,133 +344,12 @@
     </div>
   </section>
 
-  <footer style="background:#12181C;color:#93A0A7;padding:clamp(44px,6vw,80px) 0 0;overflow:hidden">
-    <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px);display:flex;gap:clamp(32px,5vw,72px);flex-wrap:wrap;align-items:flex-start">
-      <div style="flex:1 1 240px;min-width:200px;display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <span style="width:22px;height:22px;border:2px solid #E24C2B;display:flex;justify-content:center;flex:0 0 auto"><span style="width:2px;background:#E24C2B"></span></span>
-          <span style="font-family:Rubik,sans-serif;font-weight:700;font-size:17px;color:#fff;letter-spacing:-0.02em">Ventanas Perfect</span>
-        </div>
-        <p style="font-size:14px;line-height:1.55;margin:0;max-width:26ch;color:#93A0A7">Остекление террас и балконов<br />Коста-Бланка, Испания</p>
-      </div>
-
-      <sc-if value="{{ footerCols }}" hint-placeholder-val="{{ true }}">
-      <div style="flex:3 1 520px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(24px,3vw,40px)">
-        <div style="display:flex;flex-direction:column;gap:13px">
-          <div style="color:#fff;font-weight:600;font-size:15px;margin-bottom:3px">Продукция</div>
-          <a href="#products" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Зимние сады</a>
-          <a href="#products" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Сетки плиссе</a>
-          <a href="#products" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Раздвижные окна</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Окна и двери ПВХ</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Балконные системы</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:13px">
-          <div style="color:#fff;font-weight:600;font-size:15px;margin-bottom:3px">Как мы работаем</div>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Замер на объекте</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Расчёт стоимости</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Монтаж и сроки</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Гарантия и сервис</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:13px">
-          <div style="color:#fff;font-weight:600;font-size:15px;margin-bottom:3px">Информация</div>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">О компании</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Наши работы</a>
-          <a href="#reviews" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Отзывы</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Для подрядчиков</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Контакты</a>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:13px">
-          <div style="color:#fff;font-weight:600;font-size:15px;margin-bottom:3px">Связаться</div>
-          <a href="tel:+34000000000" style="color:#fff;font-size:15px;font-weight:600" style-hover="color:#E24C2B">+34 000 000 000</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">WhatsApp</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Instagram</a>
-          <a href="#" style="color:#93A0A7;font-size:14.5px" style-hover="color:#fff">Facebook</a>
-        </div>
-      </div>
-      </sc-if>
-
-      <sc-if value="{{ footerAcc }}" hint-placeholder-val="{{ false }}">
-      <div style="flex:1 1 100%">
-        <div style="border-top:1px solid #222B31">
-          <button onClick="{{ toggleAcc0 }}" style="width:100%;background:transparent;border:0;padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff;font-family:inherit;font-weight:600;font-size:16px;text-align:left;cursor:pointer">Продукция
-            <sc-if value="{{ acc0 }}" hint-placeholder-val="{{ false }}"><span style="width:13px;height:1.5px;background:#fff;flex:0 0 auto"></span></sc-if>
-            <sc-if value="{{ acc0closed }}" hint-placeholder-val="{{ true }}"><span style="position:relative;width:13px;height:13px;flex:0 0 auto"><span style="position:absolute;top:6px;left:0;width:13px;height:1.5px;background:#fff"></span><span style="position:absolute;left:6px;top:0;width:1.5px;height:13px;background:#fff"></span></span></sc-if>
-          </button>
-          <sc-if value="{{ acc0 }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-direction:column;gap:14px;padding:2px 0 20px">
-              <a href="#products" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Зимние сады</a>
-              <a href="#products" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Сетки плиссе</a>
-              <a href="#products" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Раздвижные окна</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Окна и двери ПВХ</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Балконные системы</a>
-            </div>
-          </sc-if>
-        </div>
-        <div style="border-top:1px solid #222B31">
-          <button onClick="{{ toggleAcc1 }}" style="width:100%;background:transparent;border:0;padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff;font-family:inherit;font-weight:600;font-size:16px;text-align:left;cursor:pointer">Как мы работаем
-            <sc-if value="{{ acc1 }}" hint-placeholder-val="{{ false }}"><span style="width:13px;height:1.5px;background:#fff;flex:0 0 auto"></span></sc-if>
-            <sc-if value="{{ acc1closed }}" hint-placeholder-val="{{ true }}"><span style="position:relative;width:13px;height:13px;flex:0 0 auto"><span style="position:absolute;top:6px;left:0;width:13px;height:1.5px;background:#fff"></span><span style="position:absolute;left:6px;top:0;width:1.5px;height:13px;background:#fff"></span></span></sc-if>
-          </button>
-          <sc-if value="{{ acc1 }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-direction:column;gap:14px;padding:2px 0 20px">
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Замер на объекте</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Расчёт стоимости</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Монтаж и сроки</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Гарантия и сервис</a>
-            </div>
-          </sc-if>
-        </div>
-        <div style="border-top:1px solid #222B31">
-          <button onClick="{{ toggleAcc2 }}" style="width:100%;background:transparent;border:0;padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff;font-family:inherit;font-weight:600;font-size:16px;text-align:left;cursor:pointer">Информация
-            <sc-if value="{{ acc2 }}" hint-placeholder-val="{{ false }}"><span style="width:13px;height:1.5px;background:#fff;flex:0 0 auto"></span></sc-if>
-            <sc-if value="{{ acc2closed }}" hint-placeholder-val="{{ true }}"><span style="position:relative;width:13px;height:13px;flex:0 0 auto"><span style="position:absolute;top:6px;left:0;width:13px;height:1.5px;background:#fff"></span><span style="position:absolute;left:6px;top:0;width:1.5px;height:13px;background:#fff"></span></span></sc-if>
-          </button>
-          <sc-if value="{{ acc2 }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-direction:column;gap:14px;padding:2px 0 20px">
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">О компании</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Наши работы</a>
-              <a href="#reviews" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Отзывы</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Для подрядчиков</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Контакты</a>
-            </div>
-          </sc-if>
-        </div>
-        <div style="border-top:1px solid #222B31;border-bottom:1px solid #222B31">
-          <button onClick="{{ toggleAcc3 }}" style="width:100%;background:transparent;border:0;padding:17px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;color:#fff;font-family:inherit;font-weight:600;font-size:16px;text-align:left;cursor:pointer">Связаться
-            <sc-if value="{{ acc3 }}" hint-placeholder-val="{{ false }}"><span style="width:13px;height:1.5px;background:#fff;flex:0 0 auto"></span></sc-if>
-            <sc-if value="{{ acc3closed }}" hint-placeholder-val="{{ true }}"><span style="position:relative;width:13px;height:13px;flex:0 0 auto"><span style="position:absolute;top:6px;left:0;width:13px;height:1.5px;background:#fff"></span><span style="position:absolute;left:6px;top:0;width:1.5px;height:13px;background:#fff"></span></span></sc-if>
-          </button>
-          <sc-if value="{{ acc3 }}" hint-placeholder-val="{{ false }}">
-            <div style="display:flex;flex-direction:column;gap:14px;padding:2px 0 20px">
-              <a href="tel:+34000000000" style="color:#fff;font-size:16px;font-weight:600" style-hover="color:#E24C2B">+34 000 000 000</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">WhatsApp</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Instagram</a>
-              <a href="#" style="color:#93A0A7;font-size:15px" style-hover="color:#fff">Facebook</a>
-            </div>
-          </sc-if>
-        </div>
-      </div>
-      </sc-if>
-    </div>
-
-    <div style="max-width:1360px;margin:clamp(40px,7vw,96px) auto 0;padding:0 clamp(16px,3vw,32px)">
-      <div style="font-family:Rubik,sans-serif;font-weight:700;font-size:11.4vw;line-height:0.86;letter-spacing:-0.04em;color:#3A4A52;white-space:nowrap;overflow:hidden">ventanas perfect</div>
-    </div>
-
-    <div style="max-width:1360px;margin:0 auto;padding:clamp(20px,2.5vw,28px) clamp(16px,3vw,32px);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:13px;color:#93A0A7;border-top:1px solid #222B31">
-      <span>© 2026 Ventanas Perfect</span>
-      <div style="display:flex;gap:clamp(14px,2vw,22px);flex-wrap:wrap">
-        <a href="#" style="color:#93A0A7" style-hover="color:#fff">Aviso legal</a>
-        <a href="#" style="color:#93A0A7" style-hover="color:#fff">Política de privacidad</a>
-        <a href="#" style="color:#93A0A7" style-hover="color:#fff">Cookies</a>
-      </div>
-    </div>
-  </footer>
+  <dc-import name="SiteFooter" hint-size="100%,640px"></dc-import>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Фото на весь экран&quot;,&quot;Фото справа&quot;],&quot;default&quot;:&quot;Фото на весь экран&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Первый экран&quot;},&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Секции&quot;}}">
 class Component extends DCLogic {
-  state = { menuOpen: false, burger: false, acc: null, w: typeof window !== "undefined" ? window.innerWidth : 1440 };
+  state = { menuOpen: false, burger: false, acc: null, faq: null, tab: "Все работы", w: typeof window !== "undefined" ? window.innerWidth : 1440 };
 
   componentDidMount() {
     this._onResize = () => {
@@ -500,14 +358,90 @@ class Component extends DCLogic {
     };
     window.addEventListener("resize", this._onResize);
     this._onResize();
+
+    this._tick = () => {
+      this._raf = 0;
+      const root = this._steps && this._steps.current;
+      if (!root) return;
+      const marker = window.innerHeight * 0.62;
+      root.querySelectorAll("[data-step-track]").forEach(tr => {
+        const r = tr.getBoundingClientRect();
+        const f = Math.max(0, Math.min(1, (marker - r.top) / Math.max(1, r.height)));
+        const fill = tr.querySelector("[data-step-fill]");
+        if (fill) fill.style.height = (f * 100).toFixed(2) + "%";
+      });
+      root.querySelectorAll("[data-step-dot]").forEach(d => {
+        const r = d.getBoundingClientRect();
+        const on = marker >= r.top + r.height / 2;
+        d.style.background = on ? "#E24C2B" : "#D7D3CE";
+        d.style.color = on ? "#FFFFFF" : "#83888C";
+      });
+    };
+    this._onScroll = () => { if (!this._raf) this._raf = requestAnimationFrame(this._tick); };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    window.addEventListener("resize", this._onScroll);
+    this._tick();
   }
-  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    window.removeEventListener("scroll", this._onScroll);
+    window.removeEventListener("resize", this._onScroll);
+    if (this._raf) cancelAnimationFrame(this._raf);
+  }
+  componentDidUpdate() { if (this._onScroll) this._onScroll(); }
+
+  static WORKS = [
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Терраса 18 м² под ключ", place: "Аликанте, Плайя-де-Сан-Хуан", term: "4 недели", price: "от 9 800 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Панорамный балкон 6,2 м", place: "Бенидорм, Поньенте", term: "3 недели", price: "от 4 600 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Сетки на выход в сад и 3 окна", place: "Торревьеха, Ла-Мата", term: "10 дней", price: "от 980 €" },
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Патио с раздвижной кровлей", place: "Хавея, Ареналь", term: "5 недель", price: "от 14 200 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Остекление веранды в два контура", place: "Кальпе, Ла-Фосса", term: "3,5 недели", price: "от 6 300 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Плиссе на широкий проём 3,4 м", place: "Аликанте, Кабо-де-лас-Уэртас", term: "8 дней", price: "от 1 240 €" }
+  ];
+
+  static FAQ = [
+    ["Сколько стоит зимний сад или остекление террасы?", "Цена зависит от размеров проёма, типа профиля и стекла. После бесплатного замера вы получаете смету с фиксированной стоимостью: работы и материалы в ней уже учтены, доплат в процессе монтажа нет."],
+    ["Замер и расчёт действительно бесплатные?", "Да. Мастер приезжает на объект, снимает размеры, показывает образцы профиля и стекла и подбирает решение под проём. Расчёт вы получаете в течение одного рабочего дня и ничего за него не платите."],
+    ["Сколько времени занимает изготовление и монтаж?", "Изготовление занимает от двух до четырёх недель в зависимости от конструкции. Монтаж раздвижных окон и сеток плиссе обычно укладывается в один день, зимний сад — от двух до четырёх дней."],
+    ["Какая гарантия на конструкции и работу?", "Гарантия на профиль, стеклопакеты и фурнитуру — от производителя, на монтаж — от нашей бригады. Сроки прописываем в договоре до начала работ."],
+    ["Нужны ли согласования с сообществом собственников?", "Для остекления балконов и террас в многоквартирных домах обычно требуется согласие сообщества. Мы подскажем, какие документы нужны, и подготовим чертежи и характеристики конструкции для заявки."],
+    ["Выдержит ли остекление ветер и дождь?", "Системы рассчитаны на прибрежный климат: алюминиевый профиль с порошковым покрытием, уплотнители по контуру и отвод воды. Конструкцию подбираем под ветровую нагрузку конкретного участка."],
+    ["Можно ли поставить конструкцию в нестандартный проём?", "Да. Все конструкции изготавливаются по вашим размерам, включая скошенные, арочные и угловые проёмы. Форму и наклон кровли зимнего сада согласовываем на этапе замера."],
+    ["Как ухаживать за окнами и сетками?", "Достаточно протирать профиль и стекло мягким средством и раз в год очищать направляющие и смазывать фурнитуру. Сетки плиссе моют в собранном виде, снимать их не нужно."]
+  ];
 
   renderVals() {
     const w = this.state.w;
+    const faq = Component.FAQ.map((it, i) => ({
+      q: it[0], a: it[1],
+      open: this.state.faq === i,
+      closed: this.state.faq !== i,
+      toggle: () => this.setState(s => ({ faq: s.faq === i ? null : i }))
+    }));
     const isMobile = w < 1024;
+    if (!this._steps) this._steps = React.createRef();
+    const wideSteps = w >= 900;
     const layout = this.props.heroLayout ?? "Фото на весь экран";
+    const tabLabels = ["Все работы", "Зимние сады", "Раздвижные окна", "Сетки плиссе"];
+    const cur = this.state.tab ?? "Все работы";
+    const tabs = tabLabels.map(label => ({
+      label,
+      bg: label === cur ? "#16181A" : "transparent",
+      fg: label === cur ? "#FFFFFF" : "#16181A",
+      bd: label === cur ? "#16181A" : "#CFCAC4",
+      click: () => this.setState({ tab: label })
+    }));
+    const works = Component.WORKS.filter(x => cur === "Все работы" || x.cat === cur).slice(0, 3);
+
     return {
+      faq,
+      tabs,
+      works,
+      stepsRef: this._steps,
+      stepCols: wideSteps ? "minmax(0,1fr) clamp(52px,5.4vw,80px) minmax(0,1fr)" : "clamp(34px,9vw,44px) minmax(0,1fr)",
+      imgArea: wideSteps ? "1 / 1 / 2 / 2" : "1 / 2 / 2 / 3",
+      tlArea: wideSteps ? "1 / 2 / 2 / 3" : "1 / 1 / 3 / 2",
+      txtArea: wideSteps ? "1 / 3 / 2 / 4" : "2 / 2 / 3 / 3",
       topBarVisible: (this.props.showTopBar ?? true) && w >= 720,
       desktopNav: !isMobile,
       mobileNav: isMobile,
@@ -517,6 +451,8 @@ class Component extends DCLogic {
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
       wideShowcase: w >= 900,
+      wideCard: w >= 720,
+      mobileShowcase: w < 720,
       footerCols: w >= 720,
       footerAcc: w < 720,
       acc0: this.state.acc === 0, acc0closed: this.state.acc !== 0,

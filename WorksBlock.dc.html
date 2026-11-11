@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<section id="works" style="background:#F2F0ED;padding:0 0 clamp(56px,8vw,100px)">
+  <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(16px,3vw,48px);align-items:start">
+      <h2 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(26px,3.4vw,42px);line-height:1.12;letter-spacing:-0.025em;margin:0;max-width:16ch;text-wrap:balance">Примеры работ<br /><span style="color:#8D9195">со сроками и ценой</span></h2>
+      <p style="color:#4A4F53;font-size:clamp(15px,1.6vw,17px);line-height:1.6;margin:0;max-width:44ch;justify-self:end">Реальные объекты на побережье. Выберите категорию и посмотрите, сколько заняли изготовление и монтаж и во сколько обошлась конструкция.</p>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin:clamp(24px,3.4vw,44px) 0 clamp(20px,2.6vw,32px)">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+        <button onClick="{{ t.click }}" style="background:{{ t.bg }};color:{{ t.fg }};border:1px solid {{ t.bd }};border-radius:999px;padding:13px clamp(18px,2vw,26px);font-family:Rubik,sans-serif;font-weight:600;font-size:15px;letter-spacing:.01em;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease">{{ t.label }}</button>
+      </sc-for>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(12px,1.6vw,20px)">
+      <sc-for list="{{ works }}" as="w" hint-placeholder-count="3">
+        <a href="#" style="position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:clamp(380px,40vw,520px);border-radius:clamp(14px,1.6vw,20px);overflow:hidden;background-image:url('{{ w.img }}');background-size:cover;background-position:center;color:#fff;padding:clamp(20px,2.2vw,28px)" style-hover="color:#fff">
+          <span style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,11,12,.88) 0%,rgba(10,11,12,.46) 44%,rgba(10,11,12,.06) 78%)"></span>
+          <span style="position:absolute;top:clamp(16px,1.8vw,22px);left:clamp(16px,1.8vw,22px);border:1px solid rgba(255,255,255,.65);background:rgba(12,14,16,.34);border-radius:999px;padding:8px 15px;font-size:13px;letter-spacing:.02em">{{ w.tag }}</span>
+          <span style="position:relative">
+            <span style="display:block;font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(20px,2.3vw,27px);letter-spacing:-0.02em;line-height:1.15">{{ w.title }}</span>
+            <span style="display:block;font-size:14.5px;color:#D9DCDE;margin-top:8px">{{ w.place }}</span>
+            <span style="display:flex;flex-wrap:wrap;gap:clamp(14px,2vw,26px);margin-top:clamp(16px,1.8vw,22px);padding-top:clamp(14px,1.6vw,18px);border-top:1px solid rgba(255,255,255,.26)">
+              <span style="display:block">
+                <span style="display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#B9BDC0">Срок</span>
+                <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(16px,1.8vw,19px);margin-top:5px">{{ w.term }}</span>
+              </span>
+              <span style="display:block">
+                <span style="display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#B9BDC0">Стоимость</span>
+                <span style="display:block;font-family:Rubik,sans-serif;font-weight:600;font-size:clamp(16px,1.8vw,19px);margin-top:5px">{{ w.price }}</span>
+              </span>
+            </span>
+          </span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;defaultTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Все работы&quot;,&quot;Зимние сады&quot;,&quot;Раздвижные окна&quot;,&quot;Сетки плиссе&quot;],&quot;default&quot;:&quot;Все работы&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  static WORKS = [
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Терраса 18 м² под ключ", place: "Аликанте, Плайя-де-Сан-Хуан", term: "4 недели", price: "от 9 800 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Панорамный балкон 6,2 м", place: "Бенидорм, Поньенте", term: "3 недели", price: "от 4 600 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Сетки на выход в сад и 3 окна", place: "Торревьеха, Ла-Мата", term: "10 дней", price: "от 980 €" },
+    { cat: "Зимние сады", img: "img/winter-garden.jpg", tag: "Зимний сад", title: "Патио с раздвижной кровлей", place: "Хавея, Ареналь", term: "5 недель", price: "от 14 200 €" },
+    { cat: "Раздвижные окна", img: "img/sliding-windows.jpg", tag: "Раздвижные окна", title: "Остекление веранды в два контура", place: "Кальпе, Ла-Фосса", term: "3,5 недели", price: "от 6 300 €" },
+    { cat: "Сетки плиссе", img: "img/pleated-screen.jpg", tag: "Сетки плиссе", title: "Плиссе на широкий проём 3,4 м", place: "Аликанте, Кабо-де-лас-Уэртас", term: "8 дней", price: "от 1 240 €" }
+  ];
+  renderVals() {
+    const cur = this.state.tab ?? this.props.defaultTab ?? "Все работы";
+    const tabs = ["Все работы", "Зимние сады", "Раздвижные окна", "Сетки плиссе"].map(label => ({
+      label,
+      bg: label === cur ? "#16181A" : "transparent",
+      fg: label === cur ? "#FFFFFF" : "#16181A",
+      bd: label === cur ? "#16181A" : "#CFCAC4",
+      click: () => this.setState({ tab: label })
+    }));
+    return { tabs, works: Component.WORKS.filter(x => cur === "Все работы" || x.cat === cur).slice(0, 3) };
+  }
+}
+</script>
+</body>
+</html>

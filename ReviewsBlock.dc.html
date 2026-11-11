@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<section id="reviews" style="background:#FEF6EE;padding:clamp(56px,8vw,100px) 0">
+  <div style="max-width:1360px;margin:0 auto;padding:0 clamp(16px,3vw,32px)">
+    <h2 style="font-family:Rubik,sans-serif;font-weight:700;font-size:clamp(24px,3.4vw,38px);line-height:1.15;letter-spacing:-0.025em;margin:0 0 clamp(32px,4.5vw,52px);text-align:left;text-wrap:balance">Что говорят клиенты</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.8vw,24px);align-items:start">
+      <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Терраса стала комнатой</h3>
+        <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Остеклили террасу в конце марта, теперь сидим там и в дождь, и в ветер. Замерщик приехал через два дня, монтаж занял один день, мусор увезли.</p>
+        <div style="display:flex;gap:8px">
+          <button type="button" onClick="{{ openPhoto }}" data-src="img/winter-garden.jpg" data-alt="Фото клиента: застеклённая терраса" aria-label="Открыть фото" style="padding:0;border:0;background:transparent;border-radius:10px;cursor:zoom-in;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;outline-offset:3px" style-hover="transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(22,24,26,.45)" style-active="transform:scale(.96)"><img src="img/winter-garden.jpg" alt="Фото клиента: застеклённая терраса" loading="lazy" style="width:76px;height:76px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 0 0 1px rgba(22,24,26,.06)" /></button>
+        </div>
+        <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Марина К.<br />Зимний сад, Аликанте</div>
+      </article>
+
+      <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Сетки почти не видно</h3>
+        <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Поставили плиссе на выход в сад и на три окна. Складываются в тонкий профиль, порог не мешает — коляска проезжает. Комаров в доме больше нет.</p>
+        <div style="display:flex;gap:8px">
+          <button type="button" onClick="{{ openPhoto }}" data-src="img/plisse-gal-2.jpg" data-alt="Фото клиента: сетка плиссе на выходе в сад" aria-label="Открыть фото" style="padding:0;border:0;background:transparent;border-radius:10px;cursor:zoom-in;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;outline-offset:3px" style-hover="transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(22,24,26,.45)" style-active="transform:scale(.96)"><img src="img/plisse-gal-2.jpg" alt="Фото клиента: сетка плиссе на выходе в сад" loading="lazy" style="width:76px;height:76px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 0 0 1px rgba(22,24,26,.06)" /></button>
+          <button type="button" onClick="{{ openPhoto }}" data-src="img/plisse-gal-4.jpg" data-alt="Фото клиента: сетка плиссе на окне" aria-label="Открыть фото" style="padding:0;border:0;background:transparent;border-radius:10px;cursor:zoom-in;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;outline-offset:3px" style-hover="transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(22,24,26,.45)" style-active="transform:scale(.96)"><img src="img/plisse-gal-4.jpg" alt="Фото клиента: сетка плиссе на окне" loading="lazy" style="width:76px;height:76px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 0 0 1px rgba(22,24,26,.06)" /></button>
+        </div>
+        <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Андрей и Ольга<br />Сетки плиссе, Торревьеха</div>
+      </article>
+
+      <article style="background:#F3F0EC;border-radius:18px;padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;gap:4px;color:#E24C2B;font-size:20px;line-height:1">★★★★★</div>
+        <h3 style="font-family:Rubik,sans-serif;font-weight:600;font-size:17px;letter-spacing:-0.01em;margin:0">Балкон наконец открытый</h3>
+        <p style="color:#41464A;font-size:15.5px;line-height:1.6;margin:0">Раздвижные створки сдвигаются полностью, вид не перекрыт рамами. Сделали ровно в срок и по смете, без доплат в процессе.</p>
+        <div style="display:flex;gap:8px">
+          <button type="button" onClick="{{ openPhoto }}" data-src="img/sliding-windows.jpg" data-alt="Фото клиента: балкон с раздвижными окнами" aria-label="Открыть фото" style="padding:0;border:0;background:transparent;border-radius:10px;cursor:zoom-in;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease;outline-offset:3px" style-hover="transform:translateY(-2px);box-shadow:0 10px 20px -12px rgba(22,24,26,.45)" style-active="transform:scale(.96)"><img src="img/sliding-windows.jpg" alt="Фото клиента: балкон с раздвижными окнами" loading="lazy" style="width:76px;height:76px;object-fit:cover;border-radius:10px;display:block;box-shadow:0 0 0 1px rgba(22,24,26,.06)" /></button>
+        </div>
+        <div style="color:#7A7F83;font-size:14px;line-height:1.5;margin-top:auto">Сергей Д.<br />Раздвижные окна, Бенидорм</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div role="dialog" aria-modal="true" aria-label="Фото из отзыва" aria-hidden="{{ lbHidden }}" onClick="{{ closePhoto }}" style="position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,64px);background:rgba(10,11,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:{{ lbOp }};visibility:{{ lbVis }};transition:opacity .45s cubic-bezier(.22,1,.36,1),visibility .45s;cursor:zoom-out">
+  <sc-if value="{{ lbHas }}" hint-placeholder-val="{{ false }}"><img src="{{ lbSrc }}" alt="{{ lbAlt }}" onClick="{{ lbStop }}" onTouchStart="{{ lbTouchStart }}" onTouchEnd="{{ lbTouchEnd }}" style="max-width:min(100%,1200px);max-height:100%;object-fit:contain;border-radius:clamp(12px,1.4vw,20px);box-shadow:0 40px 80px -30px rgba(0,0,0,.6);cursor:default;transform:{{ lbTf }};opacity:{{ lbImgOp }};transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .28s ease" /></sc-if>
+  <sc-if value="{{ lbMulti }}" hint-placeholder-val="{{ false }}">
+    <button type="button" onClick="{{ lbPrev }}" aria-label="Предыдущее фото" style="position:absolute;left:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s ease,transform .35s cubic-bezier(.22,1,.36,1)" style-hover="background:rgba(255,255,255,.24)" style-active="transform:translateY(-50%) scale(.92)"><svg width="16" height="16" viewBox="0 0 12 12" fill="none" style="margin-right:2px"><path d="M7.6 2.4 C5.8 4 4.3 5.15 4.3 6 C4.3 6.85 5.8 8 7.6 9.6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+    <button type="button" onClick="{{ lbNext }}" aria-label="Следующее фото" style="position:absolute;right:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s ease,transform .35s cubic-bezier(.22,1,.36,1)" style-hover="background:rgba(255,255,255,.24)" style-active="transform:translateY(-50%) scale(.92)"><svg width="16" height="16" viewBox="0 0 12 12" fill="none" style="margin-left:2px"><path d="M4.4 2.4 C6.2 4 7.7 5.15 7.7 6 C7.7 6.85 6.2 8 4.4 9.6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+    <div onClick="{{ lbStop }}" style="position:absolute;left:50%;bottom:clamp(14px,2.4vw,28px);transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);cursor:default">
+      <sc-for list="{{ lbDots }}" as="dt" hint-placeholder-count="2">
+        <button type="button" onClick="{{ dt.go }}" aria-label="{{ dt.label }}" style="width:{{ dt.w }};height:6px;padding:0;border:0;border-radius:999px;background:{{ dt.bg }};cursor:pointer;transition:width .4s cubic-bezier(.22,1,.36,1),background .3s ease"></button>
+      </sc-for>
+      <span style="font-size:13px;color:#fff;font-variant-numeric:tabular-nums">{{ lbCount }}</span>
+    </div>
+  </sc-if>
+  <button type="button" ref="{{ lbCloseRef }}" onClick="{{ closePhoto }}" aria-label="Закрыть" style="position:absolute;top:clamp(12px,2vw,24px);right:clamp(12px,2vw,24px);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s ease" style-hover="background:rgba(255,255,255,.22)"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="#fff" stroke-width="1.6" stroke-linecap="round"></path></svg></button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:760}}">
+class Component extends DCLogic {
+  state = {};
+  componentWillUnmount() {
+    if (this._lbKey) window.removeEventListener("keydown", this._lbKey);
+    clearTimeout(this._lbT);
+    if (this.state.lbOn) document.body.style.overflow = "";
+  }
+  lbGo(d) {
+    const list = this.state.lbList || [];
+    if (list.length < 2 || !this.state.lbOn || !d) return;
+    const i = (this.state.lbIdx + d + list.length) % list.length;
+    clearTimeout(this._lbT);
+    this.setState({ lbSwap: true });
+    this._lbT = setTimeout(() => this.setState({ lbIdx: i, lbSrc: list[i].src, lbAlt: list[i].alt }, () => requestAnimationFrame(() => this.setState({ lbSwap: false }))), 200);
+  }
+  closeLb() {
+    if (!this.state.lbOn) return;
+    this.setState({ lbOn: false });
+    document.body.style.overflow = "";
+    if (this._lbKey) window.removeEventListener("keydown", this._lbKey);
+    if (this._lbFrom) this._lbFrom.focus({ preventScroll: true });
+  }
+  renderVals() {
+    const S = this.state, on = !!S.lbOn, list = S.lbList || [];
+    if (!this._lbClose) this._lbClose = React.createRef();
+    return {
+      lbHas: !!S.lbSrc, lbSrc: S.lbSrc || "", lbAlt: S.lbAlt || "",
+      lbOp: on ? 1 : 0, lbImgOp: on && !S.lbSwap ? 1 : 0,
+      lbVis: on ? "visible" : "hidden", lbHidden: on ? "false" : "true",
+      lbTf: on ? "scale(1) translateY(0)" : "scale(.92) translateY(12px)",
+      lbMulti: list.length > 1,
+      lbCount: list.length > 1 ? (S.lbIdx + 1) + " / " + list.length : "",
+      lbDots: list.map((_, i) => ({
+        w: i === S.lbIdx ? "18px" : "6px", bg: i === S.lbIdx ? "#fff" : "rgba(255,255,255,.4)",
+        label: "Фото " + (i + 1),
+        go: e => { e.stopPropagation(); this.lbGo(i - this.state.lbIdx); }
+      })),
+      lbStop: e => e.stopPropagation(),
+      lbTouchStart: e => { this._lbTx = e.touches[0].clientX; },
+      lbTouchEnd: e => {
+        const dx = e.changedTouches[0].clientX - (this._lbTx ?? 0);
+        if (Math.abs(dx) > 40) this.lbGo(dx < 0 ? 1 : -1);
+      },
+      lbPrev: e => { e.stopPropagation(); this.lbGo(-1); },
+      lbNext: e => { e.stopPropagation(); this.lbGo(1); },
+      lbCloseRef: this._lbClose,
+      openPhoto: e => {
+        const b = e.currentTarget;
+        this._lbFrom = b;
+        const sib = Array.from((b.parentElement || b).querySelectorAll("[data-src]"));
+        const l = sib.map(x => ({ src: x.getAttribute("data-src"), alt: x.getAttribute("data-alt") || "" }));
+        const idx = Math.max(0, sib.indexOf(b));
+        this.setState({ lbList: l, lbIdx: idx, lbSwap: false, lbSrc: l[idx].src, lbAlt: l[idx].alt }, () => {
+          requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ lbOn: true }, () => this._lbClose.current && this._lbClose.current.focus({ preventScroll: true }))));
+        });
+        document.body.style.overflow = "hidden";
+        if (this._lbKey) window.removeEventListener("keydown", this._lbKey);
+        this._lbKey = ev => {
+          if (ev.key === "Escape") this.closeLb();
+          else if (ev.key === "ArrowRight") this.lbGo(1);
+          else if (ev.key === "ArrowLeft") this.lbGo(-1);
+        };
+        window.addEventListener("keydown", this._lbKey);
+      },
+      closePhoto: e => { e.stopPropagation(); this.closeLb(); }
+    };
+  }
+}
+</script>
+</body>
+</html>
