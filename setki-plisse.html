@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Сетки плиссе на заказ — Ventanas Perfect</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -952,7 +951,7 @@ class Component extends DCLogic {
       procCols: w >= 1000 ? "repeat(4,minmax(0,1fr))" : w >= 560 ? "repeat(2,minmax(0,1fr))" : "minmax(0,1fr)",
 
       perks: Component.PERKS.map((p, i) => ({
-        id: "pl-perk-" + i, src: "img/perks/perk-" + (i + 1) + ".jpg", name: p[0], desc: "Макро: " + p[0].toLowerCase(),
+        id: "pl-perk-" + i, src: "uploads/" + encodeURIComponent(Component.PERK_FILES[i].normalize("NFD")), name: p[0], desc: "Макро: " + p[0].toLowerCase(),
         tag: p[1] ? "Входит" : ((this.state.perkAdd || {})[i] ? "Добавлено" : "За доплату"), tagColor: p[1] ? "#41464A" : "#B3321A",
         ...(() => {
           const on = !!(this.state.perkAdd || {})[i];
